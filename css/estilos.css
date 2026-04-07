@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+.body{
+        background-image: linear-gradient(to right bottom, #000000, #161616, #252525, #353535, #464646);
+        .logo{
+        width: 100%;
+        height: auto;
+        background: #00ff88;
+        background: linear-gradient(90deg,hsl(152, 100%, 50%) 0%, rgba(255, 255, 255, 0.115) 80%);
+        clip-path: polygon(
+                        0 0,
+                        100% 0,
+                        85% 100%,
+                        0 100%   
+                    );
+    }
+    h1{
+        font-size: 36px;
+        color: #ffffff;
+    }
+    h2{
+        font-size: 24px;
+        color: #ffffff;
+     }
+     h3{
+        font-size: 18px;
+        color: #ffffff;
+     }
+     h4{
+        font-size: 16px;
+        color: #ffffff;
+     }
+     p{
+        font-size: 14px;
+        color: #ffffff;
+     }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 55px; 
+        width: 250px;           
+        padding: 0 20px;          
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .btn-primary {
+        background: #00ff88;
+        color: #333;
+    }
+    .btn-primary:hover {
+        background: #a8fdd6;
+    }
+    .btn-secondary {
+    background: #ffffff;
+    color: #333;
+    }
+    .btn-secondary:hover {
+    background: #a8fdd6;
+    }
+    .Presentacion{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 70%;
+        gap: 20px;
+        padding: 20px;
+        .imgYo{
+            .imagen-difuminada{
+                width: 360px;
+                -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+                mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+            }
+        }
+        .seccionPresentacion{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .tituloPrincipal{
+                .tituloYo{
+                font-size: 36px;
+                color: #ffffff;
+                }
+            }
+             .parrafoYo{
+                font-size: 18px;
+                color: #ffffff;
+             }
+            
+        }
+        .subSeccionPresentacion{
+            margin: 40px 0;
+            .subtituloPrincipal{
+                font-size: 22px;
+                color: #ffffff;
+                .parrafoYo{
+                    font-size: 14px;
+                    color: #ffffff;
+                 }
+            }
+        }
+    }
+    .trabajemos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .botonesTrab{
+            display: flex;
+            gap: 20px;
+            .botonTrabajemos{
+                display: inline-block;
+                background-color: #00ff88;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                &:hover{
+                    color: #333;
+                }
+            }
+        }
+        
+        .redes-sociales{
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            a{
+                color: #ffffff;
+                font-size: 54px;
+                transition: color 0.3s ease;
+                &:hover{
+                    color: #00ff88;
+                }
+            }
+        }
+    }
+    .fa-whatsapp-square{
+            color: #00ff88;
+            font-size: 4rem;
+            position: fixed;
+            bottom: 30px;
+            right: 1px;
+        } 
+    .servicios{
+        text-align: center;
+        .tituloServicios{
+            padding: 30px 0;
+        }
+        .seccionCard{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            .card {
+                position: relative;
+                overflow: hidden;
+                border-radius: 18px;
+                height: 400px;
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 20px;
+                color: white;
+                background: #111;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                .card-video {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 0;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background: linear-gradient( to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3), transparent);
+                        z-index: 1;
+                    }
+                }   
+            }
+            .card h3,
+            .card p {
+            position: relative;
+            z-index: 2;
+            }
+
+            .card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            }
+
+            .card p {
+            font-size: 14px;
+            color: #ccc;
+            }
+            .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            }
+            .card:hover .card-video {
+            transform: scale(1.1);
+            transition: transform 0.6s ease;
+            }
+                    }
+                }
+    .pricing{
+          padding: 20px 20px;
+          text-align: center;
+        .tituloPaquete{
+            font-size: 24px;
+            color: #ffffff;
+            margin: 40px 0;
+        }
+        .descripcionPaquete{
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .pricing-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
+            .pricing-card {
+                display: grid;
+                grid-template-rows: auto auto 1fr auto auto;
+                min-height: 400px;
+                background: #111;
+                color: white;
+                padding: 30px;
+                border-radius: 20px;
+                text-align: left;
+                transition: 0.3s;
+                &:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);}
+                .parrafoCosto{
+                    font-size: 18px;
+                    color: #00ff88;
+                    margin-top: 15px;
+                }
+                .titulo{
+                    font-size: 22px;
+                }
+                .subtitulo{
+                    color: #aaa;
+                    margin-bottom: 15px;
+                    margin-top: 10px;
+                }
+                ul {
+                    list-style: none;
+                    margin: 20px 0;
+                }
+
+                li {
+                    margin-bottom: 10px;
+                    position: relative;
+                    padding-left: 20px;
+
+                &::before {
+                    content: "✔";
+                    position: absolute;
+                    left: 0;
+                    color: #00ff88;
+                }
+                }
+                .note{
+                    margin-bottom: 15px;
+                    margin-left: 10px;
+                }
+                .BotonPaquetes{
+                    margin-top: auto;
+                    text-align: center;
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    background: #00ff88;
+                    color: black;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    align-items: end;
+                    .botonDec{
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+            
+                }
+            }
+        }
+    }
+    .beneficios {
+        margin: 50px;
+        border-radius: 15px;
+        padding: 80px 20px;
+        background: linear-gradient(180deg, #0f0f0f, #0a0a0a);
+        color: #fff;
+        text-align: center;
+        .tituloBeneficios{
+            font-size: 32px;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            .card {
+                background: #141414;
+                padding: 30px 20px;
+                border-radius: 16px;
+
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                .subtituloBeneficios{
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                .parrafoBeneficios{
+                    font-size: 14px;
+                    color: #aaa;
+                    line-height: 1.5;
+                } 
+                &:hover {
+                    transform: translateY(-8px) scale(1.02);
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: radial-gradient(circle at top, rgba(0,255,136,0.15), transparent);
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+                &:hover::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }     
+}
+.Portfolio{
+    .imgPortfolio{
+                    margin-top: 50px;
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    height: 550px;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    -webkit-mask-image: linear-gradient(
+                        to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+                    mask-image: linear-gradient( to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    }
+}
+.portfolioIntro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: #0f0f0f;
+    color: #fff;
+    .contenidoPortfolio {
+        max-width: 700px;
+        h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+        .botonesPortfolio {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            .btn {
+                padding: 14px 28px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-block;
+            }
+            .btn-primary {
+                background: #00ff88;
+                color: #000;
+
+                &:hover {
+                    background: #00cc6a;
+                    transform: scale(1.05);
+                }
+            }
+            .btn-secondary {
+                border: 2px solid #00ff88;
+                color: #00ff88;
+
+                &:hover {
+                    background: #00ff88;
+                    color: #000;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+.portfolioTrabajos {
+    padding: 60px 20px;
+    background: #0d0d0d;
+    color: white;
+
+    .tituloSeccion {
+        font-size: 32px;
+        margin-bottom: 50px;
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    .sliderTrabajos {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding-bottom: 20px;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #00ff88;
+            border-radius: 10px;
+        }
+    }
+
+    .cardTrabajo {
+        position: relative;
+        min-width: 280px;
+        height: 380px;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.4s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-left: 10px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 5px;
+                color: #b3b3b3;
+            }
+
+            p {
+                font-size: 14px;
+                color: #ccc;
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: #00ff88;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.08);
+
+            img {
+                transform: scale(1.15);
+            }
+
+            .overlay {
+                opacity: 1;
+            }
+        }
+    }
+}
+.sobreMi {
+        padding: 80px 20px;
+        background: #111;
+        color: #fff;
+        text-align: center;
+        .containerSobreMi {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1100px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .textoSobreMi {
+            max-width: 500px;
+
+            h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .intro {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                color: #00ff88;
+            }
+
+            p {
+                font-size: 16px;
+                color: #ccc;
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+
+            .btnSobreMi {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 12px 25px;
+                background: #00ff88;
+                color: #000;
+                border-radius: 30px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: 0.3s;
+
+                &:hover {
+                    background: #00cc6a;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    .ctaFinal {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #00ff88, #00cc6a);
+    color: #000;
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .botonesCTA {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        a {
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btnPrimary {
+            background: #000;
+            color: #fff;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .btnSecondary {
+            border: 2px solid #000;
+            color: #000;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+       
