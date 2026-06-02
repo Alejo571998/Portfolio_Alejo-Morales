@@ -591,6 +591,36 @@
 .cert-card:hover::before {
   top: 100%;
 }
+@media (max-width: 992px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .certificates {
+    padding: 60px 15px;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .cert-card {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cert-card .overlay h3 {
+    font-size: 1rem;
+  }
+
+  .cert-card .overlay span {
+    font-size: 0.85rem;
+  }
+}
 .sobreMi {
         padding: 80px 20px;
         background: #111;
