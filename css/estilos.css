@@ -505,6 +505,29 @@
         }
     }
 }
+.contenedorVerMas{
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+}
+
+.btnVerMas{
+    padding:15px 35px;
+    border:2px solid #00ff88;
+    border-radius:50px;
+    text-decoration:none;
+    color:#00ff88;
+    font-weight:600;
+    transition:.3s ease;
+    backdrop-filter:blur(10px);
+}
+
+.btnVerMas:hover{
+    background:#00ff88;
+    color:#000;
+    box-shadow:0 0 25px rgba(0,255,136,.4);
+    transform:translateY(-3px);
+}
 .certificates {
   padding: 80px 20px;
   background: #050505;
@@ -809,5 +832,840 @@
         right: 15px;
     }
 }
+.heroProyectos{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px 8%;
+    background:
+    radial-gradient(circle at top,
+    rgba(0,255,136,.12),
+    transparent 50%),
+    #0d0d0d;
+}
 
-       
+.heroContenido{
+    max-width:900px;
+}
+
+.badgeHero{
+    display:inline-block;
+    padding:10px 20px;
+    border:1px solid rgba(0,255,136,.3);
+    border-radius:50px;
+    color:#00ff88;
+    margin-bottom:25px;
+    text-decoration:none;
+}
+
+.heroContenido h1{
+    font-size:clamp(3rem,6vw,5.5rem);
+    line-height:1.1;
+    margin-bottom:25px;
+    color:#fff;
+}
+
+.heroContenido h1 span{
+    color:#00ff88;
+}
+
+.heroContenido p{
+    font-size:1.2rem;
+    color:#bcbcbc;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+.btnHero{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:40px;
+    padding:16px 36px;
+    background:#00ff88;
+    color:#0d0d0d;
+    text-decoration:none;
+    font-weight:700;
+    font-size:1rem;
+    border-radius:50px;
+    border:2px solid #00ff88;
+    transition:all .3s ease;
+    box-shadow:0 0 20px rgba(0,255,136,.3);
+}
+
+.btnHero:hover{
+    background:transparent;
+    color:#00ff88;
+    transform:translateY(-4px);
+    box-shadow:0 0 30px rgba(0,255,136,.5);
+}
+
+.btnHero:active{
+    transform:translateY(-1px);
+}
+.proyectosDestacados{
+    padding: 80px 8%;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* ===========================
+   ENCABEZADO
+=========================== */
+
+.encabezadoSeccion{
+    max-width: 800px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.subtituloSeccion{
+    display: inline-block;
+    color: #00ff88;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.encabezadoSeccion h2{
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.encabezadoSeccion p{
+    color: #bdbdbd;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ===========================
+   PROYECTO DESTACADO
+=========================== */
+
+.proyectoDestacado{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.proyectoDestacado:last-child{
+    margin-bottom: 0;
+}
+
+/* Proyecto invertido */
+
+.invertido{
+    grid-template-columns: 1fr 1fr;
+}
+
+.invertido .proyectoImagen{
+    order: 2;
+}
+
+.invertido .proyectoInfo{
+    order: 1;
+}
+
+/* ===========================
+   IMAGEN
+=========================== */
+
+.proyectoImagen{
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,.05);
+    background: #111;
+}
+
+.proyectoImagen img{
+    width: 100%;
+    display: block;
+    transition: transform .6s ease;
+}
+
+.proyectoImagen:hover img{
+    transform: scale(1.05);
+}
+
+/* ===========================
+   INFO
+=========================== */
+
+.categoriaProyecto{
+    color: #00ff88;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.proyectoInfo h3{
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin: 15px 0 20px;
+    line-height: 1.1;
+}
+
+.proyectoInfo p{
+    color: #bdbdbd;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   TECNOLOGIAS
+=========================== */
+
+.tecnologias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.tecnologias span{
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    font-size: .85rem;
+    transition: .3s ease;
+}
+
+.tecnologias span:hover{
+    background: #00ff88;
+    color: #0d0d0d;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+
+.accionesProyecto{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btnProyecto{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    background: #00ff88;
+    color: #0d0d0d;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: .3s ease;
+    box-shadow: 0 0 20px rgba(0,255,136,.2);
+}
+
+.btnProyecto:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(0,255,136,.4);
+}
+
+.btnSecundario{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    border: 2px solid #00ff88;
+    color: #00ff88;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.btnSecundario:hover{
+    background: #00ff88;
+    color: #0d0d0d;
+}
+
+/* ===========================
+   RESPONSIVE TABLET
+=========================== */
+
+@media (max-width: 992px){
+
+    .proyectoDestacado,
+    .invertido{
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 100px;
+    }
+
+    .invertido .proyectoImagen,
+    .invertido .proyectoInfo{
+        order: unset;
+    }
+
+    .proyectoInfo{
+        text-align: center;
+    }
+
+    .tecnologias{
+        justify-content: center;
+    }
+
+    .accionesProyecto{
+        justify-content: center;
+    }
+}
+
+/* ===========================
+   RESPONSIVE MOBILE
+=========================== */
+
+@media (max-width: 768px){
+
+    .proyectosDestacados{
+        padding: 80px 6%;
+    }
+
+    .encabezadoSeccion{
+        margin-bottom: 70px;
+    }
+
+    .encabezadoSeccion h2{
+        font-size: 2rem;
+    }
+
+    .encabezadoSeccion p{
+        font-size: .95rem;
+    }
+
+    .proyectoInfo h3{
+        font-size: 2rem;
+    }
+
+    .accionesProyecto{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnProyecto,
+    .btnSecundario{
+        width: 100%;
+    }
+} 
+/* ===========================
+   UX/UI CASE STUDIES
+=========================== */
+
+.caseStudies{
+    padding: 80px 8%;
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.caseHeader{
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.caseSubtitulo{
+    display: inline-block;
+    color: #00ff88;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.caseHeader h2{
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.caseHeader p{
+    color: #bdbdbd;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ===========================
+   CASE CARD
+=========================== */
+
+.caseCard{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    align-items: center;
+
+    background: #161616;
+    border: 1px solid rgba(255,255,255,.05);
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    margin-bottom: 35px;
+
+    transition: all .4s ease;
+}
+
+.caseCard:hover{
+    transform: translateY(-5px);
+    border-color: rgba(0,255,136,.25);
+    box-shadow: 0 15px 40px rgba(0,255,136,.08);
+}
+
+/* ===========================
+   IMAGEN
+=========================== */
+
+.caseImagen{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.caseImagen img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.caseCard:hover .caseImagen img{
+    transform: scale(1.05);
+}
+
+/* ===========================
+   INFORMACIÓN
+=========================== */
+
+.caseCategoria{
+    display: inline-block;
+    color: #00ff88;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.caseInfo h3{
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.caseInfo p{
+    color: #bdbdbd;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   TAGS
+=========================== */
+
+.caseTags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.caseTags span{
+    padding: 8px 14px;
+    border-radius: 50px;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    font-size: .85rem;
+    transition: .3s ease;
+}
+
+.caseTags span:hover{
+    background: #00ff88;
+    color: #0d0d0d;
+}
+
+/* ===========================
+   BOTÓN
+=========================== */
+
+.btnCase{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    background: #00ff88;
+    color: #0d0d0d;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: all .3s ease;
+
+    box-shadow: 0 0 20px rgba(0,255,136,.2);
+}
+
+.btnCase:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(0,255,136,.4);
+}
+
+/* ===========================
+   RESPONSIVE TABLET
+=========================== */
+
+@media (max-width: 992px){
+
+    .caseCard{
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .caseImagen{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .caseTags{
+        justify-content: center;
+    }
+
+    .btnCase{
+        margin: 0 auto;
+    }
+}
+
+/* ===========================
+   RESPONSIVE MOBILE
+=========================== */
+
+@media (max-width: 768px){
+
+    .caseStudies{
+        padding: 80px 6%;
+    }
+
+    .caseHeader{
+        margin-bottom: 60px;
+    }
+
+    .caseHeader h2{
+        font-size: 2rem;
+    }
+
+    .caseHeader p{
+        font-size: .95rem;
+    }
+
+    .caseCard{
+        padding: 25px;
+    }
+
+    .caseInfo h3{
+        font-size: 1.8rem;
+    }
+
+    .caseTags{
+        gap: 8px;
+    }
+
+    .caseTags span{
+        font-size: .8rem;
+        padding: 7px 12px;
+    }
+
+    .btnCase{
+        width: 100%;
+    }
+}
+.webProjects{
+    padding: 80px 8%;
+    background: #0d0d0d;
+    color: #ffffff;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.webHeader{
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.webSubtitulo{
+    display: inline-block;
+    color: #00ff88;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.webHeader h2{
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.webHeader p{
+    color: #bdbdbd;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ===========================
+   GRID TIPO NETFLIX
+=========================== */
+
+.netflixGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.netflixCard{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #161616;
+    transition: all .4s ease;
+    border: 1px solid rgba(255,255,255,.05);
+}
+
+.netflixCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s ease;
+}
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.cardOverlay{
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.98) 15%,
+        rgba(0,0,0,.8) 45%,
+        rgba(0,0,0,.25) 70%,
+        transparent 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 30px;
+}
+
+/* ===========================
+   HOVER ESTILO NETFLIX
+=========================== */
+
+.netflixCard:hover{
+    transform: scale(1.05);
+    z-index: 10;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.5),
+        0 0 30px rgba(0,255,136,.15);
+}
+
+.netflixCard:hover img{
+    transform: scale(1.1);
+}
+
+/* ===========================
+   CONTENIDO
+=========================== */
+
+.cardCategoria{
+    color: #00ff88;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.cardOverlay h3{
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.cardOverlay p{
+    color: #d0d0d0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   TAGS
+=========================== */
+
+.cardTags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cardTags span{
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    font-size: .8rem;
+    transition: .3s ease;
+}
+
+.cardTags span:hover{
+    background: #00ff88;
+    color: #0d0d0d;
+}
+
+/* ===========================
+   BOTÓN
+=========================== */
+
+.cardOverlay a{
+    width: fit-content;
+
+    padding: 12px 22px;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    background: #00ff88;
+    color: #0d0d0d;
+
+    font-weight: 700;
+
+    transition: all .3s ease;
+
+    box-shadow: 0 0 20px rgba(0,255,136,.15);
+}
+
+.cardOverlay a:hover{
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(0,255,136,.4);
+}
+
+/* ===========================
+   RESPONSIVE TABLET
+=========================== */
+
+@media (max-width: 992px){
+
+    .netflixGrid{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .netflixCard{
+        height: 450px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE MOBILE
+=========================== */
+
+@media (max-width: 768px){
+
+    .webProjects{
+        padding: 80px 6%;
+    }
+
+    .webHeader{
+        margin-bottom: 60px;
+    }
+
+    .webHeader h2{
+        font-size: 2rem;
+    }
+
+    .webHeader p{
+        font-size: .95rem;
+    }
+
+    .netflixGrid{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .netflixCard{
+        height: 420px;
+    }
+
+    .cardOverlay{
+        padding: 25px;
+    }
+
+    .cardOverlay h3{
+        font-size: 1.5rem;
+    }
+
+    .cardOverlay p{
+        font-size: .9rem;
+    }
+
+    .cardTags{
+        gap: 8px;
+    }
+
+    .cardTags span{
+        font-size: .75rem;
+        padding: 6px 10px;
+    }
+
+    .cardOverlay a{
+        width: 100%;
+        justify-content: center;
+    }
+}
