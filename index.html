@@ -1,363 +1,404 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejo Morales - Portfolio</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/53f4a08901.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alejo Morales — Diseño UX/UI &amp; Desarrollo Front-End</title>
+<meta name="description" content="Alejo Morales. Diseñador UX/UI y Desarrollador Front-End. Diseño y construyo productos digitales rápidos, cuidados y pensados para convertir.">
+<meta name="theme-color" content="#08080b">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alejo Morales — Diseño UX/UI & Desarrollo Front-End">
+<meta property="og:description" content="Diseño y desarrollo de productos digitales rápidos, cuidados y pensados para convertir.">
+<meta property="og:image" content="./assets/img/yo largo.png">
+<meta property="og:url" content="https://portfolio-alejomorales.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio-alejomorales.vercel.app/">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/53f4a08901.js" crossorigin="anonymous" defer></script>
+<link rel="stylesheet" href="./css/estilos.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alejo Morales",
+  "jobTitle": "Diseñador UX/UI y Desarrollador Front-End",
+  "url": "https://portfolio-alejomorales.vercel.app/",
+  "sameAs": [
+    "https://www.instagram.com/alejo.menta/",
+    "https://www.linkedin.com/in/alejo-morales-7592b9388/",
+    "https://github.com/Alejo571998"
+  ]
+}
+</script>
 </head>
-<body class="body">
-        <div class="logo">
-            <a class="logoImg" href="#"><img src="./assets/img/Logochica.png" alt="Logo"></a>
+<body>
+
+<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header" id="siteHeader">
+  <a href="#top" class="brand" aria-label="Inicio">
+    <span class="brand-mark">AM</span>
+    <span class="brand-tag">alejo.morales</span>
+  </a>
+
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a href="#servicios"><span class="nav-idx">01</span>Servicios</a>
+    <a href="#trabajos"><span class="nav-idx">02</span>Trabajos</a>
+    <a href="#sobre-mi"><span class="nav-idx">03</span>Sobre mí</a>
+    <a href="#paquetes"><span class="nav-idx">04</span>Paquetes</a>
+    <a href="#contacto"><span class="nav-idx">05</span>Contacto</a>
+  </nav>
+
+  <div class="header-actions">
+    <span class="status-pill"><span class="status-dot"></span>Disponible para proyectos</span>
+    <a href="#contacto" class="btn btn-ghost btn-sm">Hablemos</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#servicios">Servicios</a>
+  <a href="#trabajos">Trabajos</a>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#paquetes">Paquetes</a>
+  <a href="#contacto">Contacto</a>
+</div>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <canvas id="fieldCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="eyebrow mono"><span class="eyebrow-bracket">&lt;</span>portfolio_2026<span class="eyebrow-bracket">/&gt;</span></p>
+
+      <h1 class="hero-name">
+        <span class="line">Alejo</span>
+        <span class="line accent-line">Morales<span class="caret" aria-hidden="true"></span></span>
+      </h1>
+
+      <div class="hero-meta">
+        <p class="hero-role mono">Diseño UX/UI <span class="dot-sep">·</span> Desarrollo Front-End</p>
+        <p class="hero-desc">Diseño experiencias digitales modernas y las construyo con código propio. Ayudo a marcas y negocios a tener productos que se ven bien y que funcionan.</p>
+
+        <div class="hero-actions">
+          <a href="#paquetes" class="btn btn-primary magnetic">
+            <span>Trabajemos juntos</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="#trabajos" class="btn btn-outline magnetic">Ver trabajos</a>
         </div>
-        <section class="Presentacion">
-            <div class="imgYo">
-                <img src="./assets/img/yo largo.png" class="imagen-difuminada" alt="yo">
-            </div>
-            <section class="seccionPresentacion">
-                <div class="tituloPrincipal">
-                    <h1 class="tituloYo">Hola, soy Alejo Morales.</h1>
-                    <p class="parrafoYo">Diseñador UX/UI y Desarrollador Front-end.</p>
-                </div>
-                <div class="subSeccionPresentacion">
-                    <h3 class="subtituloPrincipal">Diseño experiencias digitales modernas.</h3>
-                    <p class="parrafoYo">Ayudo a marcas, emprendimientos, empresas o negocios a <br> tener mejores productos digitales.</p>
-                </div>
-            </section>   
-        </section>
-        <section class="trabajemos">
-            <div class="botonesTrab">
-                <a class="btn btn-primary" href="#paquetes">Trabajemos Juntos</a>
-                <a class="btn btn-primary" href="#Portfolio">Ver Portfolio</a>
-            </div>
-            <section class="redes-sociales">
-                <a href="https://www.instagram.com/alejo.menta/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/alejo-morales-7592b9388/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Alejo571998?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </section>
-        </section>
-        <section class="servicios">
-            <h2 class="tituloServicios">Servicios</h2>
-            <section class="seccionCard">
-                <div class="card">
-                    <video class="card-video" autoplay muted loop playsinline>
-                        <source src=".//assets/video/DiseñadorUxUi.mp4" type="video/mp4">
-                    </video>
-                    <h3 class="tituloServicios">Diseño UX/UI</h3>
-                    <p class="parrafoServicios">Interfaces modernas centradas en el usuario.</p>
-                </div>
-                <div class="card">
-                    <video class="card-video" autoplay muted loop playsinline>
-                        <source src=".//assets/video/DesarrolloWeb.mp4" type="video/mp4">
-                    </video>
-                    <h3 class="tituloServicios">Desarrollo Front-end</h3>
-                    <p class="parrafoServicios">Webs rápidas y optimizadas.</p>
-                </div>
-            </section> 
-        </section>
-        <div>
-            <a href="https://wa.link/s55d24" target="_blank"><i class="fab fa-whatsapp-square"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <div class="hero-photo">
+        <img src="./assets/img/yo largo.png" alt="Retrato de Alejo Morales" loading="eager" fetchpriority="high">
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.instagram.com/alejo.menta/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/alejo-morales-7592b9388/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Alejo571998?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <a href="#servicios" class="scroll-cue" aria-label="Bajar a servicios">
+      <span class="mono">scroll</span>
+      <span class="scroll-line"><span class="scroll-line-fill"></span></span>
+    </a>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>UX Research</span><span>·</span><span>UI Design</span><span>·</span><span>Front-End</span><span>·</span>
+      <span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>JavaScript</span><span>·</span>
+      <span>Figma</span><span>·</span><span>Responsive</span><span>·</span>
+      <span>UX Research</span><span>·</span><span>UI Design</span><span>·</span><span>Front-End</span><span>·</span>
+      <span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>JavaScript</span><span>·</span>
+      <span>Figma</span><span>·</span><span>Responsive</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section class="section services" id="servicios">
+    <div class="section-head reveal">
+      <span class="eyebrow mono">// 01 — servicios</span>
+      <h2>Dos disciplinas.<br>Un mismo producto.</h2>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <div class="service-card-media">
+          <video autoplay muted loop playsinline aria-hidden="true">
+            <source src="./assets/video/DiseñadorUxUi.mp4" type="video/mp4">
+          </video>
         </div>
-        <section class="Portfolio" id="Portfolio">
-                <img src="./assets/img/BackPortfolio0.png" alt="portfolio" class="imgPortfolio">
-        </section>
-        <section class="portfolioIntro">
-            <div class="contenidoPortfolio">
-                <h2>Mi Portfolio</h2>
-                <p class="parrafoPortfolio">Aquí puedes ver algunos de mis proyectos recientes. Desde sitios web hasta aplicaciones móviles, cada proyecto refleja mi compromiso con el diseño centrado en el usuario y la calidad técnica.</p>
-                <div class="botonesPortfolio">
-                    <a href="https://drive.google.com/file/d/1oQiCeBfrRYse8_zET46mwezRMq61E4fX/view?usp=sharing" target="_blank" class="btn btn-primary">
-                        Ver Curriculum Vitae
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="portfolioTrabajos">
+        <div class="service-card-body">
+          <span class="service-index mono">01</span>
+          <h3>Diseño UX/UI</h3>
+          <p>Investigación, wireframes y prototipado de interfaces modernas, centradas en el usuario real y en objetivos de negocio.</p>
+          <ul class="service-tags">
+            <li>User Research</li><li>Wireframing</li><li>Figma</li><li>UI Design</li>
+          </ul>
+        </div>
+      </article>
 
-            <h2 class="tituloSeccion">Mis Trabajos</h2>
+      <article class="service-card reveal">
+        <div class="service-card-media">
+          <video autoplay muted loop playsinline aria-hidden="true">
+            <source src="./assets/video/DesarrolloWeb.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="service-card-body">
+          <span class="service-index mono">02</span>
+          <h3>Desarrollo Front-End</h3>
+          <p>Webs rápidas, responsive y bien estructuradas: del diseño al código, sin perder fidelidad ni performance.</p>
+          <ul class="service-tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Performance</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
 
-            <div class="gridTrabajos">
+  <!-- ================= TRABAJOS ================= -->
+  <section class="section work" id="trabajos">
+    <div class="section-head reveal">
+      <span class="eyebrow mono">// 02 — trabajos</span>
+      <h2>Proyectos recientes</h2>
+      <p class="section-sub">Una muestra de sitios y productos que diseñé y desarrollé de punta a punta.</p>
+    </div>
 
-                <div class="cardTrabajo">
-                    <img src="./assets/img/Pagina_Elmentaa-Photoroom1.png" alt="Proyecto 1">
+    <div class="work-grid">
+      <article class="work-card reveal">
+        <div class="work-card-img"><img src="./assets/img/proyectoboda.png" alt="Proyecto Boda" loading="lazy"></div>
+        <div class="work-card-info">
+          <span class="work-cat mono">Landing Page One Page</span>
+          <h3>Boda Valentina y Matias </h3>
+          <p> One Page moderna y elegante, diseñada para ofrecer una experiencia inmersiva</p>
+          <a href="https://proyecto-boda-rho.vercel.app/" target="_blank" rel="noopener" class="work-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
 
-                    <div class="overlay">
-                        <h3>Sitio web para un Streamer</h3>
-                        <p>Experiencia moderna con enfoque UX/UI intuitivo</p>
-                        <a href="https://elmentaa.vercel.app/" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
+      <article class="work-card reveal">
+        <div class="work-card-img">
+          <img src="./assets/img/App_Alacancha.png" alt="App móvil de reserva de canchas A la Cancha" loading="lazy">
+        </div>
+        <div class="work-card-info">
+          <span class="work-cat mono">App Mobile · UX Research</span>
+          <h3>A la Cancha</h3>
+          <p>Reporte UX y UI completo de una app de reserva de canchas deportivas.</p>
+          <a href="https://www.figma.com/design/XJf1frs3f8fGSst18KL4zH/Portfolio-Dise%C3%B1o-Ux-Ui?node-id=0-1&t=yRGy3Gng5LCql1ON-1" target="_blank" rel="noopener" class="work-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
 
-                <div class="cardTrabajo">
-                    <img src="./assets/img/App_Alacancha.png" alt="Proyecto 2">
+      <article class="work-card reveal">
+        <div class="work-card-img">
+          <img src="./assets/img/lovable_web.png" alt="MentaTools, herramientas para desarrolladores" loading="lazy">
+        </div>
+        <div class="work-card-info">
+          <span class="work-cat mono">Web App · Front-End</span>
+          <h3>MentaTools</h3>
+          <p>Herramientas web pensadas para desarrolladores, rápidas y directas.</p>
+          <a href="https://mentatool.lovable.app/" target="_blank" rel="noopener" class="work-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+    </div>
 
-                    <div class="overlay">
-                        <h3>Creación de app mobile</h3>
-                        <p>Reporte UX y UI de app de reserva de canchas</p>
-                        <a href="#" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
+    <div class="work-more reveal">
+      <a href="./pages/proyectos.html" class="btn btn-outline magnetic">Ver todos los proyectos <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
 
-                <div class="cardTrabajo">
-                    <img src="./assets/img/lovable_web.png" alt="Proyecto 4">
+  <!-- ================= SOBRE MI ================= -->
+  <section class="section about" id="sobre-mi">
+    <div class="about-grid">
+      <div class="about-label reveal">
+        <span class="eyebrow mono">// 03 — sobre mí</span>
+      </div>
+      <div class="about-content reveal">
+        <p class="about-lead">Diseño experiencias que convierten ideas en resultados reales.</p>
+        <p>Me especializo en Diseño UX/UI y Desarrollo Front-End, combinando creatividad con código para lograr productos que no solo se ven bien, sino que también cumplen un objetivo.</p>
+        <p>Trabajo con clientes que buscan destacar su presencia online mediante sitios rápidos, visualmente cuidados y pensados para el usuario que los va a usar.</p>
+        <a href="https://drive.google.com/file/d/1oQiCeBfrRYse8_zET46mwezRMq61E4fX/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline magnetic">Ver Curriculum Vitae</a>
+      </div>
+    </div>
+  </section>
 
-                    <div class="overlay">
-                        <h3>MentaTools</h3>
-                        <p>Herramientas para desarrolladores</p>
-                        <a href="https://mentatool.lovable.app/" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
+  <!-- ================= CERTIFICADOS ================= -->
+  <section class="section certs">
+    <div class="section-head reveal">
+      <span class="eyebrow mono">// 04 — formación</span>
+      <h2>Certificados</h2>
+    </div>
+    <div class="certs-grid">
+      <figure class="cert-card reveal">
+        <img src="./assets/img/Diploma_FronEndAM.png" alt="Diploma Desarrollo Front End - Coderhouse" loading="lazy">
+        <figcaption><h3>Desarrollo Front End</h3><span class="mono">Coderhouse</span></figcaption>
+      </figure>
+      <figure class="cert-card reveal">
+        <img src="./assets/img/Diploma_UXUIAM.png" alt="Diploma Diseño UX UI - Coderhouse" loading="lazy">
+        <figcaption><h3>Diseño UX/UI</h3><span class="mono">Coderhouse</span></figcaption>
+      </figure>
+      <figure class="cert-card reveal">
+        <img src="./assets/img/Diploma_UXUIAvanzadoAM.png" alt="Diploma Diseño UX UI Avanzado - Coderhouse" loading="lazy">
+        <figcaption><h3>UX/UI Avanzado</h3><span class="mono">Coderhouse</span></figcaption>
+      </figure>
+      <figure class="cert-card reveal">
+        <img src="./assets/img/Diploma_UXResearchAM.jpg" alt="Diploma UX Research - Coderhouse" loading="lazy">
+        <figcaption><h3>UX Research</h3><span class="mono">Coderhouse</span></figcaption>
+      </figure>
+      <figure class="cert-card reveal">
+        <img src="./assets/img/Certificado Ux Writer Alejo Morales_page-0001.jpg" alt="Diploma UX Writer - Coderhouse" loading="lazy">
+        <figcaption><h3>UX Writer</h3><span class="mono">Coderhouse</span></figcaption>
+      </figure>
+    </div>
+  </section>
 
-            </div>
+  <!-- ================= PAQUETES ================= -->
+  <section class="section pricing" id="paquetes">
+    <div class="section-head reveal">
+      <span class="eyebrow mono">// 05 — paquetes</span>
+      <h2>Elegí cómo empezar</h2>
+      <p class="section-sub">Paquetes de diseño y desarrollo para emprendedores, negocios y marcas. Desde sitios simples hasta soluciones a medida.</p>
+    </div>
 
-            <div class="contenedorVerMas">
-                <a href="./pages/proyectos.html" class="btnVerMas">
-                    Ver todos los proyectos
-                </a>
-            </div>
+    <div class="pricing-grid">
+      <article class="price-card reveal">
+        <h3>Básico</h3>
+        <p class="price-sub">Presencia Online</p>
+        <ul class="price-list">
+          <li>Landing page</li>
+          <li>Hasta 4 secciones</li>
+          <li>Diseño responsive</li>
+          <li>Integración con WhatsApp</li>
+        </ul>
+        <div class="price-tag mono">$60.000</div>
+        <p class="price-note">Sin mantenimiento</p>
+        <a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="btn btn-outline btn-block magnetic">Elegir plan</a>
+      </article>
 
-        </section>
-        <!--<section class="portfolioTrabajos">
+      <article class="price-card featured reveal">
+        <span class="price-ribbon mono">Más elegido</span>
+        <h3>Profesional</h3>
+        <p class="price-sub">Negocio Online</p>
+        <ul class="price-list">
+          <li>Diseño UX/UI personalizado</li>
+          <li>Hasta 5 páginas</li>
+          <li>Hasta 4 secciones por página</li>
+          <li>Responsive completo</li>
+          <li>Botones a redes sociales</li>
+          <li>Formulario de contacto</li>
+        </ul>
+        <div class="price-tag mono">$85.000</div>
+        <p class="price-note">Sin mantenimiento</p>
+        <a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="btn btn-primary btn-block magnetic">Elegir plan</a>
+      </article>
 
-            <h2 class="tituloSeccion">Mis Trabajos</h2>
+      <article class="price-card reveal">
+        <h3>Premium</h3>
+        <p class="price-sub">Web Profesional</p>
+        <ul class="price-list">
+          <li>Diseño UX/UI completo</li>
+          <li>Hasta 8 páginas</li>
+          <li>Animaciones e interacciones</li>
+          <li>Optimización SEO básica</li>
+          <li>Optimización de velocidad</li>
+          <li>Google Analytics</li>
+          <li>Formularios avanzados</li>
+        </ul>
+        <div class="price-tag mono">$150.000</div>
+        <p class="price-note">Con mantenimiento</p>
+        <a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="btn btn-outline btn-block magnetic">Elegir plan</a>
+      </article>
+    </div>
 
-            <div class="gridTrabajos">
+    <div class="pricing-extra">
+      <article class="price-mini reveal">
+        <h3>Armá tu paquete</h3>
+        <p>Elegí lo que necesitás y te armamos un presupuesto a medida.</p>
+        <a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Consultar</a>
+      </article>
+      <article class="price-mini reveal">
+        <h3>Servicios adicionales</h3>
+        <ul class="price-list-inline">
+          <li>Mantenimiento mensual <span>$25.000–$60.000</span></li>
+          <li>Nuevas secciones <span>desde $30.000</span></li>
+          <li>Landing adicional <span>$80.000</span></li>
+          <li>SEO básico <span>$50.000</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-                <div class="cardTrabajo">
-                    <img src="./assets/img/Pagina_Elmentaa-Photoroom1.png" alt="Proyecto 1">
+  <!-- ================= BENEFICIOS ================= -->
+  <section class="section benefits">
+    <div class="benefits-grid">
+      <article class="benefit-card reveal">
+        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+        <h3>Entrega rápida</h3>
+        <p>Tu web lista en días, no semanas.</p>
+      </article>
+      <article class="benefit-card reveal">
+        <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+        <h3>100% responsive</h3>
+        <p>Se ve perfecta en cualquier dispositivo.</p>
+      </article>
+      <article class="benefit-card reveal">
+        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+        <h3>Pensada para vender</h3>
+        <p>Diseñada con foco en generar clientes.</p>
+      </article>
+    </div>
+  </section>
 
-                    <div class="overlay">
-                        <h3>Sitio web para un Streamer</h3>
-                        <p>Experiencia moderna con enfoque UX/UI intuitivo</p>
-                        <a href="https://elmundodementa.netlify.app/" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
+  <!-- ================= CTA FINAL ================= -->
+  <section class="cta-final" id="contacto">
+    <div class="cta-inner reveal">
+      <span class="eyebrow mono">// 06 — contacto</span>
+      <h2>¿Tenés un proyecto<br>en mente?</h2>
+      <p>Estoy disponible para trabajos freelance y contrataciones.</p>
+      <div class="cta-actions">
+        <a href="mailto:tuemail@gmail.com" class="btn btn-primary magnetic">Enviame un email</a>
+        <a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="btn btn-outline magnetic">Hablemos por WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
-                <div class="cardTrabajo">
-                    <img src="./assets/img/App_Alacancha.png" alt="Proyecto 2">
+</main>
 
-                    <div class="overlay">
-                        <h3>Creacion de app mobile</h3>
-                        <p>Reporte UX y UI de app de reserva de canchas</p>
-                        <a href="https://www.figma.com/design/XJf1frs3f8fGSst18KL4zH/Portfolio-Dise%C3%B1o-Ux-Ui?node-id=0-1&t=yRGy3Gng5LCql1ON-1" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
+<footer class="site-footer">
+  <div class="footer-top">
+    <span class="brand-mark">AM</span>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/alejo.menta/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/alejo-morales-7592b9388/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Alejo571998?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+  <p class="footer-bottom mono">© <span id="year"></span> Alejo Morales — Diseño UX/UI &amp; Desarrollo Front-End</p>
+</footer>
 
-                <div class="cardTrabajo">
-                    <img src="./assets/img/Zonaprop.png" alt="Proyecto 3">
+<a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="whatsapp-fab magnetic" aria-label="Escribir por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-                    <div class="overlay">
-                        <h3>Rediseño de Zonaprop</h3>
-                        <p>Reporte UX/UI completo</p>
-                        <a href="https://docs.google.com/presentation/d/17-rIhy-i706i8xNaZFJa17Iq6tMHCFNPEGJTMt_rpe4/edit?usp=sharing" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
-
-                <div class="cardTrabajo">
-                    <img src="./assets/img/lovable_web.png" alt="Proyecto 4">
-
-                    <div class="overlay">
-                        <h3>MentaTools</h3>
-                        <p>Herramientas para desarrolladores</p>
-                        <a href="https://mentatool.lovable.app/" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
-
-                <div class="cardTrabajo">
-                    <img src="./assets/img/AmordidasCar.png" alt="Proyecto 5">
-
-                    <div class="overlay">
-                        <h3>A Mordidas</h3>
-                        <p>Sitio web enfoque UX/UI moderno.</p>
-                        <a href="https://a-mordidas-sandwicheria.vercel.app/" target="_blank">Ver proyecto</a>
-                    </div>
-                </div>
-
-                <div class="cardTrabajo">
-                    <img src="./assets/img/Proximamente.png" alt="Proyecto 5">
-
-                    <div class="overlay">
-                        <h3>Próximamente</h3>
-                        <p>Más proyectos en camino</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>-->
-            <section class="sobreMi">
-                <div class="containerSobreMi">
-
-                    <div class="textoSobreMi">
-                        <h2>Sobre mí</h2>
-                        <p class="intro">
-                            Diseño experiencias que convierten tus ideas en resultados reales.
-                        </p>
-                        <p>
-                            Me especializo en Diseño UI/UX y Desarrollo Web Front End, combinando creatividad con código para lograr resultados que no solo se vean bien, sino que también conviertan tus ideas en resultados reales.
-                        </p>
-                        <p>
-                            Trabajo con clientes que buscan destacar su presencia online mediante sitios rápidos, visualmente impactantes y pensados para el usuario.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section class="certificates">
-                <h2>Certificados</h2>
-
-                <div class="container">
-                    <div class="cert-grid">
-
-                        <div class="cert-card">
-                            <img src="./assets/img/Diploma_FronEndAM.png" alt="Desarrollo Front-end">
-                            <div class="overlay">
-                                <h3>Diploma Desarrollo Front End</h3>
-                                <span>Coderhouse</span>
-                            </div>
-                        </div>
-
-                        <div class="cert-card">
-                            <img src="./assets/img/Diploma_UXUIAM.png" alt="Diseño Ux Ui">
-                            <div class="overlay">
-                                <h3>Diploma Diseño UX UI</h3>
-                                <span>Coderhouse</span>
-                            </div>
-                        </div>
-
-                        <div class="cert-card">
-                            <img src="./assets/img/Diploma_UXUIAvanzadoAM.png" alt="Diseño Ux Ui Avanzado">
-                            <div class="overlay">
-                                <h3>Diploma Diseño UX UI Avanzado</h3>
-                                <span>Coderhouse</span>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <img src="./assets/img/Diploma_UXResearchAM.jpg" alt="Diseño Ux Research">
-                            <div class="overlay">
-                                <h3>Diploma Diseño UX Research</h3>
-                                <span>Coderhouse</span>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <img src="./assets/img/Certificado Ux Writer Alejo Morales_page-0001.jpg" alt="Diseño Ux Writer">
-                            <div class="overlay">
-                                <h3>Diploma Diseño UX Writer</h3>
-                                <span>Coderhouse</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        <section class="pricing" id="paquetes">
-            <h2 class="tituloPaquete">Paquetes</h2>
-            <p class="descripcionPaquete">Ofrezco paquetes de diseño y desarrollo web para emprendedores, negocios y marcas que buscan una presencia online profesional. Desde sitios simples hasta soluciones personalizadas, tengo opciones para cada necesidad.</p>
-            <section class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="titulo">Básico</h3>
-                    <p class="subtitulo">Presencia Online</p>
-                    <ul>
-                        <li>Landing page.</li>
-                        <li>Hasta 4 secciones</li>
-                        <li>Diseño responsive.</li>
-                        <li>Integración con WhatsApp.</li>
-                        <p class="parrafoCosto">Costo: $60.000</p>
-                    </ul>
-                    <p class="note">Sin mantenimiento</p>
-                    <div class="BotonPaquetes">
-                        <a class="botonDec" href="https://wa.link/s55d24" target="_blank">Elegir plan</a>
-                    </div>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="titulo">Profesional</h3>
-                    <p class="subtitulo">Negocio Online</p>
-                    <ul>
-                        <li>Diseño UX/UI Personalizado.</li>
-                        <li>Hasta 5 paginas.</li>
-                        <li>Hasta 4 secciones.</li>
-                        <li>Resposive completo.</li>
-                        <li>Botones a tus redes sociales.</li>
-                        <li>Formulario de contacto.</li>
-                        <p class="parrafoCosto">Costo: $85.000</p>
-                    </ul>
-                    <p class="note">Sin mantenimiento</p>
-                    <div class="BotonPaquetes">
-                        <a class="botonDec" href="https://wa.link/s55d24" target="_blank">Elegir plan</a>
-                    </div>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="titulo">Premium</h3>
-                    <p class="subtitulo">Web Profesional.</p>
-                    <ul>
-                        <li>Diseño UX/UI Completo.</li>
-                        <li>Hasta 8 paginas..</li>
-                        <li>Animaciones e interacciones.</li>
-                        <li>Optimizacion SEO basica.</li>
-                        <li>Optimizacion de velocidad.</li> 
-                        <li>Google Analytics.</li>
-                        <li>Formularios avanzados.</li>
-                        <p class="parrafoCosto">Costo: $150.000</p>
-                    </ul>
-                    <p class="note">Con mantenimiento</p>
-                    <div class="BotonPaquetes">
-                        <a class="botonDec" href="https://wa.link/s55d24" target="_blank">Elegir plan</a>
-                    </div>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="titulo">Armá tu paquete</h3>
-                    <p class="subtitulo">Decision Online.</p>
-                    <ul>
-                        <li>Elegí lo que necesitás y te armamos un presupuesto a medida</li>
-                    </ul>
-                        <div class="BotonPaquetes">
-                            <a class="botonDec" href="https://wa.link/s55d24" target="_blank">Consulta</a>
-                        </div>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="titulo">Servicios adicionales</h3>
-                    <ul>
-                        <li>Mantenimiento mensual → $25.000 - $60.000</li>
-                        <li>Nuevas secciones → $30.000+</li>
-                        <li>Landing adicional → $80.000</li>
-                        <li>SEO básico → $50.000</li>
-                    </ul>
-                </div>
-            </section>
-        </section>
-        <section class="beneficios">
-            <h2 class="tituloBeneficios">¿Por qué trabajar conmigo?</h2>
-            <div class="grid">
-                <div class="card">
-                <h3 class="subtituloBeneficios">🚀 Entrega rápida</h3>
-                <p class="parrafoBeneficios">Tu web lista en días, no semanas.</p>
-                </div>
-
-                <div class="card">
-                <h3 class="subtituloBeneficios">📱 100% responsive</h3>
-                <p class="parrafoBeneficios">Se ve perfecta en cualquier dispositivo.</p>
-                </div>
-
-                <div class="card">
-                <h3 class="subtituloBeneficios">💰 Pensada para vender</h3>
-                <p class="parrafoBeneficios">Diseñada para generar clientes.</p>
-                </div>
-            </div>
-
-        </section>
-        <section class="ctaFinal" id="contacto">
-            <h2>¿Tenés un proyecto en mente?</h2>
-            <p>Estoy disponible para trabajos freelance y contrataciones.</p>
-
-            <div class="botonesCTA">
-                <a href="mailto:tuemail@gmail.com" class="btnPrimary">
-                    Enviame un email
-                </a>
-
-                <a href="https://wa.link/s55d24" target="_blank" class="btnSecondary">
-                    Hablemos por WhatsApp
-                </a>
-            </div>
-        </section>
+<script src="./js/script.js" defer></script>
 </body>
 </html>
