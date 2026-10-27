@@ -1,0 +1,38 @@
+{
+  "name": "portfolio-tools",
+  "private": true,
+  "description": "Herramientas locales del portfolio (no se despliegan): servidor de desarrollo, optimización de imágenes y del modelo 3D de Taku, render de posters y capturas.",
+  "type": "module",
+  "scripts": {
+    "serve": "node serve.mjs",
+    "images": "node optimize-images.mjs",
+    "taku": "node optimize-taku.mjs",
+    "vendor": "node vendor-three.mjs",
+    "posters": "node render-posters.mjs",
+    "check": "node check-site.mjs",
+    "contrast": "node contrast.mjs",
+    "tripo": "node tripo-taku.mjs",
+    "favicon": "node favicon.mjs",
+    "rig": "node taku-rig.mjs",
+    "mixamo": "node mixamo-taku.mjs",
+    "hero-foto": "node hero-foto.mjs",
+    "hero-cielo": "node hero-cielo.mjs",
+    "contraste-hero": "node contraste-hero.mjs"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "4.5.1",
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/extensions": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "axe-core": "4.13.0",
+    "esbuild": "0.28.2",
+    "meshoptimizer": "1.3.0",
+    "pdfjs-dist": "5.7.284",
+    "playwright-core": "1.63.0",
+    "sharp": "0.34.5",
+    "three": "0.186.1"
+  },
+  "overrides": {
+    "sharp": "0.34.5"
+  }
+}

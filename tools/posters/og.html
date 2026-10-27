@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>og</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..600&family=Inter:wght@400..600&display=block" rel="stylesheet">
+<style>
+  /* Imagen para compartir (1200×630): el hero del sitio, con el nombre, el titular y el retrato
+     sobre el campo de puntos */
+  html,body{margin:0}
+  body{width:1200px;height:630px;overflow:hidden;position:relative;color:#EDEDED;font-family:'Inter',sans-serif;
+    background:radial-gradient(36% 56% at 80% 56%, rgba(248,96,0,.22), transparent 72%), #131313}
+  canvas{position:absolute;inset:0}
+  .t{position:absolute;left:80px;top:96px;width:700px}
+  .k{font:480 17px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#C4C4C4;margin-bottom:22px}
+  .n{margin:0;font-family:'Archivo',sans-serif;font-stretch:112%;font-weight:560;font-size:112px;line-height:1;letter-spacing:-.012em;
+    background:linear-gradient(180deg,#fff 15%,#C4C4C4 120%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.12em}
+  .h{margin:22px 0 0;font-family:'Archivo',sans-serif;font-stretch:112%;font-weight:480;font-size:40px;line-height:1.15;color:#EDEDED}
+  .p{position:absolute;right:86px;bottom:0;width:330px;height:428px}
+  .p::before{content:"";position:absolute;inset:16% 0 0;border-radius:20px 20px 0 0;
+    background:radial-gradient(90% 70% at 50% 105%, rgba(248,96,0,.5), transparent 72%), #1B1B1B;box-shadow:inset 0 0 0 1px rgba(237,237,237,.08)}
+  .p::after{content:"";position:absolute;left:50%;top:2%;width:64%;aspect-ratio:1;translate:-50% 0;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(237,237,237,.16)}
+  .p img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;object-position:bottom}
+</style></head>
+<body>
+<canvas id="c" width="1200" height="630"></canvas>
+<div class="t"><div class="k">Diseño UX/UI y desarrollo web · Santa Fe</div>
+<h1 class="n">Alejo<br>Morales</h1>
+<p class="h">Del concepto al producto.<br>Del diseño al código.</p></div>
+<div class="p"><img src="/assets/media/alejo-408.webp" alt=""></div>
+<script>
+  // El campo de puntos del sitio, quieto y con semilla fija para que la imagen salga siempre igual
+  let s = 7; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const g = document.getElementById('c').getContext('2d');
+  const pts = Array.from({ length: 46 }, () => ({ x: rnd() * 1200, y: rnd() * 630 }));
+  for (const a of pts) for (const b of pts) {
+    const d = Math.hypot(a.x - b.x, a.y - b.y);
+    if (a !== b && d < 150) { g.strokeStyle = `rgba(255,154,92,${0.16 * (1 - d / 150)})`; g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke(); }
+  }
+  for (const p of pts) { g.fillStyle = 'rgba(237,237,237,.5)'; g.beginPath(); g.arc(p.x, p.y, 1.4, 0, 7); g.fill(); }
+</script>
+</body></html>

@@ -1,0 +1,5 @@
+# Herramientas y documentación interna: no forman parte del sitio publicado
+tools/
+docs/
+.claude/
+AGENTS.md

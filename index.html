@@ -1,330 +1,567 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alejo Morales — Diseño UX/UI &amp; Desarrollo Front-End</title>
-<meta name="description" content="Alejo Morales. Diseñador UX/UI y Desarrollador Front-End. Diseño y construyo productos digitales rápidos, cuidados y pensados para convertir.">
-<meta name="theme-color" content="#08080b">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alejo Morales — Diseño UX/UI & Desarrollo Front-End">
-<meta property="og:description" content="Diseño y desarrollo de productos digitales rápidos, cuidados y pensados para convertir.">
-<meta property="og:image" content="./assets/img/yo largo.png">
-<meta property="og:url" content="https://portfolio-alejomorales.vercel.app/">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alejo Morales — Diseño UX/UI y desarrollo web</title>
+<meta name="description" content="Portfolio de Alejo Morales, diseñador UX/UI y desarrollador web en Santa Fe, Argentina. VITRACK y RUTIX, las apps del Takuverso, casos de UX research y sitios para negocios.">
+<meta name="author" content="Alejo Morales">
+<meta name="theme-color" content="#131313">
 <link rel="canonical" href="https://portfolio-alejomorales.vercel.app/">
 
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- Open Graph / redes -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Alejo Morales">
+<meta property="og:title" content="Alejo Morales — Diseño UX/UI y desarrollo web">
+<meta property="og:description" content="Del concepto al producto. Del diseño al código. Apps propias con React, TypeScript y Supabase, y casos de UX research.">
+<meta property="og:url" content="https://portfolio-alejomorales.vercel.app/">
+<meta property="og:image" content="https://portfolio-alejomorales.vercel.app/assets/media/og-alejo-morales.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alejo Morales, diseño UX/UI y desarrollo web: su retrato junto al titular «Del concepto al producto. Del diseño al código.»">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/media/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/media/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/media/apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/53f4a08901.js" crossorigin="anonymous" defer></script>
-<link rel="stylesheet" href="./css/estilos.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..600&family=Inter:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Alejo Morales",
-  "jobTitle": "Diseñador UX/UI y Desarrollador Front-End",
+  "jobTitle": "Diseñador UX/UI y desarrollador web",
   "url": "https://portfolio-alejomorales.vercel.app/",
+  "email": "mailto:alejonm30@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Santa Fe", "addressCountry": "AR" },
+  "alumniOf": { "@type": "Organization", "name": "Coderhouse" },
+  "knowsAbout": ["Diseño UX/UI", "UX Research", "UX Writing", "Desarrollo web", "React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Accesibilidad web"],
   "sameAs": [
-    "https://www.instagram.com/alejo.menta/",
     "https://www.linkedin.com/in/alejo-morales-7592b9388/",
-    "https://github.com/Alejo571998"
+    "https://github.com/Alejo571998",
+    "https://www.instagram.com/alejo.menta/"
   ]
 }
 </script>
 </head>
 <body>
 
-<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-down-right" viewBox="0 0 24 24"><path d="M7 7l10 10M17 9v8H9"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.1A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-research" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6M8 9h5M8 12h3"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M9 9v11"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+  <symbol id="i-cv" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <!-- Logos de Simple Icons (CC0) -->
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+</svg>
 
-<a class="skip-link" href="#main">Saltar al contenido</a>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<header class="site-header" id="siteHeader">
-  <a href="#top" class="brand" aria-label="Inicio">
-    <span class="brand-mark">AM</span>
-  </a>
-
-  <nav class="main-nav" aria-label="Navegación principal">
-    <a href="#trabajos">Trabajos</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <div class="header-actions">
-    <span class="status-pill"><span class="status-dot"></span>Disponible para proyectos</span>
-    <a href="#contacto" class="btn btn-ghost btn-sm">Hablemos</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span>
-    </button>
+<header class="nav" id="nav">
+  <div class="container">
+    <nav class="nav-bar" aria-label="Principal">
+      <a class="nav-brand" href="#inicio" aria-label="Alejo Morales, volver al inicio">
+        <img class="brand-mark" src="assets/media/logo-am-96.webp" srcset="assets/media/logo-am-96.webp 1x, assets/media/logo-am-192.webp 2x" width="48" height="22" alt="">
+        <span>Alejo Morales</span>
+      </a>
+      <div class="nav-links">
+        <a href="#trabajo">Proyectos</a>
+        <a href="#takuverso">Takuverso</a>
+        <a href="#casos">Casos UX</a>
+        <a href="#sitios">Sitios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </div>
+      <div class="nav-end">
+        <a class="btn btn-ghost btn-sm nav-cta" href="#contacto">Contacto</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-sheet">
+          <span class="bars" aria-hidden="true"></span><span class="nav-toggle-label">Menú</span>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-sheet" id="nav-sheet" hidden>
+      <a href="#trabajo">Proyectos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#takuverso">Takuverso <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#casos">Casos UX <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#sitios">Sitios <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#sobre-mi">Sobre mí <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#contacto">Contacto</a>
+    </div>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <a href="#trabajos">Trabajos</a>
-  <a href="#servicios">Servicios</a>
-  <a href="#sobre-mi">Sobre mí</a>
-  <a href="#contacto">Contacto</a>
-</div>
-
-<main id="main">
+<main id="contenido">
 
   <!-- ================= HERO ================= -->
-  <section class="hero" id="top">
-    <canvas id="fieldCanvas" class="hero-canvas" aria-hidden="true"></canvas>
-    <div class="hero-grid" aria-hidden="true"></div>
-
-    <div class="hero-inner">
-      <p class="eyebrow mono"><span class="eyebrow-bracket">&lt;</span>portfolio_2026<span class="eyebrow-bracket">/&gt;</span></p>
-
-      <h1 class="hero-name">
-        <span class="line">Alejo</span>
-        <span class="line accent-line">Morales<span class="caret" aria-hidden="true"></span></span>
-      </h1>
-
-      <div class="hero-meta">
-        <p class="hero-role mono">Diseño UX/UI <span class="dot-sep">·</span> Desarrollo Front-End</p>
-        <p class="hero-desc">Diseño experiencias digitales modernas y las construyo con código propio. Ayudo a marcas y negocios a tener productos que se ven bien y que funcionan.</p>
-
-        <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary magnetic">
-            <span>Trabajemos juntos</span>
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
-          <a href="#trabajos" class="btn btn-outline magnetic">Ver trabajos</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-side">
-      <div class="hero-photo">
-        <img src="./assets/img/yo largo.png" alt="Retrato de Alejo Morales" loading="eager" fetchpriority="high">
-      </div>
-      <div class="hero-socials">
-        <a href="https://www.instagram.com/alejo.menta/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/alejo-morales-7592b9388/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Alejo571998?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </div>
-
-    <a href="#servicios" class="scroll-cue" aria-label="Bajar a servicios">
-      <span class="mono">scroll</span>
-      <span class="scroll-line"><span class="scroll-line-fill"></span></span>
-    </a>
-  </section>
-
-  <!-- ================= MARQUEE ================= -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>UX Research</span><span>·</span><span>UI Design</span><span>·</span><span>Front-End</span><span>·</span>
-      <span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>JavaScript</span><span>·</span>
-      <span>Figma</span><span>·</span><span>Responsive</span><span>·</span>
-      <span>UX Research</span><span>·</span><span>UI Design</span><span>·</span><span>Front-End</span><span>·</span>
-      <span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>JavaScript</span><span>·</span>
-      <span>Figma</span><span>·</span><span>Responsive</span><span>·</span>
-    </div>
-  </div>
-
-  <!-- ================= TRABAJOS ================= -->
-  <section class="section work" id="trabajos">
-    <div class="section-head reveal">
-      <span class="eyebrow mono"><span style="display:inline-flex;align-items:center;gap:10px"><span style="display:inline-block;width:9px;height:9px;background:var(--accent);border-radius:2px" aria-hidden="true"></span><span style="font-size:14px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)">trabajos</span></span></span>
-      <h2>Proyectos recientes</h2>
-      <p class="section-sub">Una muestra de sitios y productos que diseñé y desarrollé de punta a punta.</p>
-    </div>
-
-    <div class="work-grid">
-      <article class="work-card reveal">
-        <div class="work-card-img">
-          <img src="./assets/img/App_Alacancha.png" alt="App móvil de reserva de canchas A la Cancha" loading="lazy">
-        </div>
-        <div class="work-card-info">
-          <span class="work-cat mono">App Mobile · UX Research</span>
-          <h3>A la Cancha</h3>
-          <p>Reporte UX y UI completo de una app de reserva de canchas deportivas.</p>
-          <a href="https://www.figma.com/design/XJf1frs3f8fGSst18KL4zH/Portfolio-Dise%C3%B1o-Ux-Ui?node-id=0-1&t=yRGy3Gng5LCql1ON-1" target="_blank" rel="noopener" class="work-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </article>
-
-      <article class="work-card reveal">
-        <div class="work-card-img"><img src="./assets/img/ZonapropUXUI.png" alt="Caso de estudio rediseño de Zonaprop" loading="lazy"></div>
-        <div class="work-card-info">
-          <span class="work-cat mono">Rediseño UX/UI</span>
-          <h3>Zonaprop Rediseño</h3>
-          <p>Análisis heurístico, detección de problemas de usabilidad y propuesta de rediseño orientada a mejorar la búsqueda inmobiliaria.</p>
-          <ul class="service-tags" style="margin-bottom:18px;">
-            <li>UX Audit</li><li>Usabilidad</li><li>Figma</li><li>UI Redesign</li>
-          </ul>
-          <a href="https://docs.google.com/presentation/d/17-rIhy-i706i8xNaZFJa17Iq6tMHCFNPEGJTMt_rpe4/edit?usp=sharing" target="_blank" rel="noopener" class="work-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </article>
-
-      <article class="work-card reveal">
-        <div class="work-card-img">
-          <img src="./assets/img/lovable_web.png" alt="MentaTools, herramientas para desarrolladores" loading="lazy">
-        </div>
-        <div class="work-card-info">
-          <span class="work-cat mono">Web App · Front-End</span>
-          <h3>MentaTools</h3>
-          <p>Herramientas web pensadas para desarrolladores, rápidas y directas.</p>
-          <a href="https://mentatool.lovable.app/" target="_blank" rel="noopener" class="work-link">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </article>
-    </div>
-
-    <div class="work-more reveal">
-      <a href="./pages/proyectos.html" class="btn btn-primary magnetic">Ver todos los proyectos <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-  </section>
-
-  <!-- ================= SERVICIOS ================= -->
-  <section class="section services" id="servicios">
-    <div class="section-head reveal">
-      <span class="eyebrow mono"><span style="display:inline-flex;align-items:center;gap:10px"><span style="display:inline-block;width:9px;height:9px;background:var(--accent);border-radius:2px" aria-hidden="true"></span><span style="font-size:14px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)">servicios</span></span></span>
-      <h2>Dos disciplinas.<br>Un mismo producto.</h2>
-    </div>
-
-    <div class="services-grid">
-      <article class="service-card reveal">
-        <div class="service-card-media">
-          <video autoplay muted loop playsinline aria-hidden="true">
-            <source src="./assets/video/DiseñadorUxUi.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-card-body">
-          <span class="service-index mono">01</span>
-          <h3>Diseño UX/UI</h3>
-          <p>Investigación, wireframes y prototipado de interfaces modernas, centradas en el usuario real y en objetivos de negocio.</p>
-          <ul class="service-tags">
-            <li>User Research</li><li>Wireframing</li><li>Figma</li><li>UI Design</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-card-media">
-          <video autoplay muted loop playsinline aria-hidden="true">
-            <source src="./assets/video/DesarrolloWeb.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="service-card-body">
-          <span class="service-index mono">02</span>
-          <h3>Desarrollo Front-End</h3>
-          <p>Webs rápidas, responsive y bien estructuradas: del diseño al código, sin perder fidelidad ni performance.</p>
-          <ul class="service-tags">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Performance</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ================= SOBRE MI ================= -->
-  <section class="section about" id="sobre-mi">
-    <div class="about-grid">
-      <div class="about-label reveal">
-        <span class="eyebrow mono"><span style="display:inline-flex;align-items:center;gap:10px"><span style="display:inline-block;width:9px;height:9px;background:var(--accent);border-radius:2px" aria-hidden="true"></span><span style="font-size:14px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)">sobre mí</span></span></span>
-      </div>
-      <div class="about-content reveal">
-        <h3 style="font-size:clamp(28px,2.6vw,34px);line-height:1.2;font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;color:var(--text)">Diseño y programo el mismo producto <span style="color:var(--accent)">de punta a punta</span>.</h3>
-        <p style="color:var(--text-dim);margin-top:18px;font-size:.98rem;line-height:1.75">Desde la investigación UX hasta el código que lo pone en producción. Me especializo en Diseño UX/UI y Desarrollo Front-End: combino ambos para que el resultado no solo se vea bien, sino que funcione. Me formé en Coderhouse en Front-End, UX/UI, UX Research y UX Writing, y lo aplico en proyectos reales — rediseños de producto, herramientas propias, sitios en producción.</p>
-        <ul class="service-tags" style="margin-top:20px;margin-bottom:22px">
-          <li>Front-End</li><li>UX/UI</li><li>UX Research</li><li>UX Writing</li>
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-kicker">Portfolio · Santa Fe, Argentina</span>
+          <span class="hero-name"><span class="hero-name-line"><span>Alejo</span></span> <span class="hero-name-line"><span>Morales</span></span></span>
+          <span class="hero-headline"><span class="hero-line">Del concepto al producto.</span> <span class="hero-line">Del diseño al código.</span></span>
+        </h1>
+        <p class="hero-lead">Soy desarrollador web y diseñador UX/UI. Combino tecnología, diseño e inteligencia artificial para transformar ideas en productos digitales funcionales, intuitivos y cuidadosamente diseñados, desde la conceptualización hasta su implementación.</p>
+        <ul class="hero-tags" aria-label="Especialidades">
+          <li>Desarrollo web</li>
+          <li lang="en">UX/UI Design</li>
+          <li lang="en">AI-powered products</li>
         </ul>
-        <a href="https://drive.google.com/file/d/1oQiCeBfrRYse8_zET46mwezRMq61E4fX/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline magnetic">Ver Curriculum Vitae</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#trabajo"><svg class="icon" aria-hidden="true"><use href="#i-down-right"/></svg>Explorar proyectos</a>
+          <a class="btn btn-ghost" href="#contacto"><svg class="icon" aria-hidden="true"><use href="#i-out"/></svg>Contactar</a>
+        </div>
+      </div>
+
+      <div class="hero-aside">
+        <div class="hero-portrait">
+          <img src="assets/media/alejo-408.webp" width="408" height="529" fetchpriority="high" decoding="async" alt="Alejo Morales con camisa blanca y corbata, de brazos cruzados.">
+        </div>
+        <ul class="hero-social" aria-label="Perfiles">
+          <li><a class="app-icon app-icon--sm" href="https://www.linkedin.com/in/alejo-morales-7592b9388/" data-tip="LinkedIn" target="_blank" rel="noopener"><svg class="glyph" aria-hidden="true"><use href="#i-linkedin"/></svg><span class="visually-hidden">LinkedIn (se abre en otra pestaña)</span></a></li>
+          <li><a class="app-icon app-icon--sm" href="https://github.com/Alejo571998?tab=repositories" data-tip="GitHub" target="_blank" rel="noopener"><svg class="glyph" aria-hidden="true"><use href="#i-github"/></svg><span class="visually-hidden">GitHub (se abre en otra pestaña)</span></a></li>
+          <li><a class="app-icon app-icon--sm" href="https://drive.google.com/file/d/1oQiCeBfrRYse8_zET46mwezRMq61E4fX/view?usp=sharing" data-tip="CV en PDF" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cv"/></svg><span class="visually-hidden">CV en PDF (Google Drive, se abre en otra pestaña)</span></a></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ================= CERTIFICADOS ================= -->
-  <section class="section certs">
-    <div class="section-head reveal">
-      <span class="eyebrow mono"><span style="display:inline-flex;align-items:center;gap:10px"><span style="display:inline-block;width:9px;height:9px;background:var(--accent);border-radius:2px" aria-hidden="true"></span><span style="font-size:14px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)">formación</span></span></span>
-      <h2>Certificados</h2>
-    </div>
-    <div class="certs-grid">
-      <figure class="cert-card reveal">
-        <img src="./assets/img/Diploma_FronEndAM.png" alt="Diploma Desarrollo Front End - Coderhouse" loading="lazy">
-        <figcaption><h3>Desarrollo Front End</h3><span class="mono">Coderhouse</span></figcaption>
-      </figure>
-      <figure class="cert-card reveal">
-        <img src="./assets/img/Diploma_UXUIAM.png" alt="Diploma Diseño UX UI - Coderhouse" loading="lazy">
-        <figcaption><h3>Diseño UX/UI</h3><span class="mono">Coderhouse</span></figcaption>
-      </figure>
-      <figure class="cert-card reveal">
-        <img src="./assets/img/Diploma_UXUIAvanzadoAM.png" alt="Diploma Diseño UX UI Avanzado - Coderhouse" loading="lazy">
-        <figcaption><h3>UX/UI Avanzado</h3><span class="mono">Coderhouse</span></figcaption>
-      </figure>
-      <figure class="cert-card reveal">
-        <img src="./assets/img/Diploma_UXResearchAM.jpg" alt="Diploma UX Research - Coderhouse" loading="lazy">
-        <figcaption><h3>UX Research</h3><span class="mono">Coderhouse</span></figcaption>
-      </figure>
-      <figure class="cert-card reveal">
-        <img src="./assets/img/Certificado Ux Writer Alejo Morales_page-0001.jpg" alt="Diploma UX Writer - Coderhouse" loading="lazy">
-        <figcaption><h3>UX Writer</h3><span class="mono">Coderhouse</span></figcaption>
-      </figure>
+  <!-- ================= PERFIL ================= -->
+  <section class="section" id="perfil" aria-labelledby="perfil-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Perfil</p>
+        <h2 class="section-title" id="perfil-title" data-reveal>Entiendo el problema, lo diseño y lo construyo</h2>
+        <p class="section-lead" data-reveal style="--delay:80ms">Vengo de más de siete años en ventas y atención al cliente, y de ahí traigo la costumbre de escuchar antes de proponer. En 2024 estudié desarrollo front-end y entre 2025 y 2026 la carrera de Diseño UX/UI. Desde entonces diseño y programo mis propias aplicaciones, de la primera entrevista hasta publicarlas.</p>
+      </header>
+
+      <ul class="capabilities">
+        <li class="card capability" data-reveal>
+          <svg class="icon" aria-hidden="true"><use href="#i-research"/></svg>
+          <h3 class="card-title">Investigación</h3>
+          <p>Entrevistas, encuestas, card sorting, tree testing y evaluación heurística. En Zonaprop, el tree test mostró que el problema no eran las tareas sino cómo estaban nombrados los filtros.</p>
+          <ul class="tags"><li>Entrevistas</li><li>Card sorting</li><li>Tree testing</li><li>UX Writing</li></ul>
+        </li>
+        <li class="card capability" data-reveal style="--delay:60ms">
+          <svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg>
+          <h3 class="card-title">Diseño de interfaces</h3>
+          <p>Diseño en Figma con tokens, componentes y estados, con el contraste y el foco resueltos desde el principio. Después lo programo yo, así que lo que dibujo tiene que poder construirse.</p>
+          <ul class="tags"><li>Figma</li><li>Sistemas de diseño</li><li>WCAG 2.2</li></ul>
+        </li>
+        <li class="card capability" data-reveal style="--delay:120ms">
+          <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
+          <h3 class="card-title">Desarrollo</h3>
+          <p>React, Next.js y TypeScript en la interfaz; Supabase y PostgreSQL con las reglas y los permisos en la base de datos; tests unitarios y de punta a punta antes de publicar.</p>
+          <ul class="tags"><li>React</li><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Playwright</li></ul>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- ================= BENEFICIOS ================= -->
-  <section class="section benefits">
-    <div class="benefits-grid">
-      <article class="benefit-card reveal">
-        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-        <h3>Entrega rápida</h3>
-        <p>Tu web lista en días, no semanas.</p>
-      </article>
-      <article class="benefit-card reveal">
-        <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
-        <h3>100% responsive</h3>
-        <p>Se ve perfecta en cualquier dispositivo.</p>
-      </article>
-      <article class="benefit-card reveal">
-        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-        <h3>Pensada para vender</h3>
-        <p>Diseñada con foco en generar clientes.</p>
-      </article>
+  <!-- ================= PROYECTOS RECIENTES ================= -->
+  <section class="section" id="trabajo" aria-labelledby="trabajo-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Proyectos recientes · octubre 2026</p>
+        <h2 class="section-title" id="trabajo-title" data-reveal>Dos productos de punta a punta</h2>
+        <p class="section-lead" data-reveal style="--delay:80ms">En los dos definí el producto, diseñé las pantallas y desarrollé la interfaz, el servidor y la base de datos, con permisos por rol y tests. Cada ficha dice en qué etapa está; el proceso completo, en la página de cada uno.</p>
+      </header>
+
+      <!-- La captura manda; el detalle (decisiones, evidencias, tests) vive en casos/*.html -->
+      <ul class="features">
+        <li class="feature-item" data-reveal>
+          <article class="feature" aria-labelledby="vitrack-title">
+            <div class="feature-media">
+              <img src="assets/media/vitrack-panel-720.webp" srcset="assets/media/vitrack-panel-720.webp 720w, assets/media/vitrack-panel-1352.webp 1352w" sizes="(min-width: 1240px) 592px, (min-width: 905px) 48vw, (min-width: 700px) 54vw, 92vw" width="1352" height="845" loading="lazy" decoding="async" alt="Panel de VITRACK en modo oscuro: litros de vino en bodega, ocupación de vasijas, mermas y botellas disponibles, con el gráfico de los últimos 30 días.">
+            </div>
+            <div class="feature-body">
+              <div class="feature-head">
+                <h3 class="feature-title" id="vitrack-title"><a class="stretched" href="casos/vitrack.html">VITRACK <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+                <span class="status">En piloto con una bodega</span>
+              </div>
+              <p class="feature-desc">Gestión para bodegas chicas y medianas: vasijas, lotes, análisis y botellas, desde la computadora o el celular, también sin señal.</p>
+              <div class="feature-foot">
+                <ul class="tags"><li>React</li><li>Vite</li><li>Fastify</li><li>PostgreSQL</li><li>PWA</li></ul>
+                <a class="btn btn-ghost btn-sm feature-live" href="https://vitrack-app.vercel.app/" target="_blank" rel="noopener">Abrir la app <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> VITRACK (se abre en otra pestaña)</span></a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="feature-item" data-reveal style="--delay:80ms">
+          <article class="feature" aria-labelledby="rutix-title">
+            <div class="feature-media">
+              <img src="assets/media/rutix-reparto-720.webp" srcset="assets/media/rutix-reparto-720.webp 720w, assets/media/rutix-reparto-1266.webp 1266w" sizes="(min-width: 1240px) 592px, (min-width: 905px) 48vw, (min-width: 700px) 54vw, 92vw" width="1266" height="791" loading="lazy" decoding="async" alt="Vista Reparto de RUTIX: mapa con la posición del repartidor, aviso de que está llegando a lo de una clienta y las salidas en curso y en preparación.">
+            </div>
+            <div class="feature-body">
+              <div class="feature-head">
+                <h3 class="feature-title" id="rutix-title"><a class="stretched" href="casos/rutix.html">RUTIX <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></h3>
+                <span class="status" data-status="dev">En desarrollo</span>
+              </div>
+              <p class="feature-desc">Reparto para restaurantes y rotiserías: pedidos, repartidores con GPS y el pedido en camino, en el mapa, para quien lo espera.</p>
+              <div class="feature-foot">
+                <ul class="tags"><li>Next.js</li><li>Expo</li><li>React Native</li><li>Supabase</li><li>PostgreSQL</li></ul>
+                <span class="actions-note">Sin demo pública todavía</span>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- ================= CTA FINAL ================= -->
-  <section class="cta-final" id="contacto">
-    <div class="cta-inner reveal">
-      <span class="eyebrow mono"><span style="display:inline-flex;align-items:center;gap:10px"><span style="display:inline-block;width:9px;height:9px;background:var(--accent);border-radius:2px" aria-hidden="true"></span><span style="font-size:14px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)">contacto</span></span></span>
-      <h2>¿Tenés un proyecto<br>en mente?</h2>
-      <p>Busco sumarme a un equipo como developer o diseñador UX/UI — full-time, part-time o freelance.</p>
-      <div class="cta-actions">
-        <a href="mailto:alejonm30@gmail.com" class="btn btn-primary magnetic">Enviame un email</a>
-        <a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="btn btn-outline magnetic">Hablemos por WhatsApp</a>
+  <!-- ================= TAKUVERSO ================= -->
+  <section class="section takuverso" id="takuverso" aria-labelledby="takuverso-title">
+    <div class="container tv-world" data-tv>
+      <div class="tv-side">
+        <header class="tv-head">
+          <p class="eyebrow">Apps propias · cinco paradas</p>
+          <h2 class="tv-title" id="takuverso-title" data-reveal>Takuverso</h2>
+          <p class="tv-lead" data-reveal style="--delay:80ms">Taku es el personaje que acompaña las aplicaciones que diseño y programo por mi cuenta. Cada una resuelve un problema distinto y Taku se viste para la ocasión, pero su papel es siempre el mismo: explicar en el momento justo y no estorbar el resto del tiempo. Elegí una parada del mapa para ver cada app.</p>
+        </header>
+
+        <div class="tv-map" id="taku-stage">
+          <svg class="tv-path" aria-hidden="true" focusable="false"></svg>
+          <div class="tv-stations" role="tablist" aria-label="Apps del Takuverso">
+            <button class="tv-station" type="button" role="tab" id="tab-organiza" aria-controls="app-organiza" aria-selected="true" tabindex="0"><span class="tv-pad" aria-hidden="true"></span><span class="tv-station-name">Organiza</span></button>
+            <button class="tv-station" type="button" role="tab" id="tab-dnd" aria-controls="app-dnd" aria-selected="false" tabindex="-1"><span class="tv-pad" aria-hidden="true"></span><span class="tv-station-name">D&amp;D</span></button>
+            <button class="tv-station" type="button" role="tab" id="tab-gastro" aria-controls="app-gastro" aria-selected="false" tabindex="-1"><span class="tv-pad" aria-hidden="true"></span><span class="tv-station-name">Gastro</span></button>
+            <button class="tv-station" type="button" role="tab" id="tab-tramite" aria-controls="app-tramite" aria-selected="false" tabindex="-1"><span class="tv-pad" aria-hidden="true"></span><span class="tv-station-name">Trámite Claro</span></button>
+            <button class="tv-station" type="button" role="tab" id="tab-giftly" aria-controls="app-giftly" aria-selected="false" tabindex="-1"><span class="tv-pad" aria-hidden="true"></span><span class="tv-station-name">Giftly</span></button>
+          </div>
+          <div class="tv-taku" aria-hidden="true">
+            <img src="assets/media/taku-hola-360.webp" srcset="assets/media/taku-hola-360.webp 360w, assets/media/taku-hola-720.webp 720w" sizes="120px" width="720" height="900" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="tv-stage">
+        <div class="tv-hud">
+          <p class="tv-count" aria-hidden="true"><span data-tv-index>01</span><span class="tv-count-total">/ 05</span></p>
+          <span class="tv-progress" aria-hidden="true"><span></span></span>
+          <div class="tv-steps">
+            <button class="tv-step" type="button" data-tv-step="-1" aria-label="App anterior"><svg class="icon icon-prev" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="tv-step" type="button" data-tv-step="1" aria-label="App siguiente"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Para sumar una app: una parada (.tv-station) con su posición en estilos.css y un panel (.tv-app) -->
+        <div class="tv-panels">
+          <div class="tv-app" role="tabpanel" id="app-organiza" aria-labelledby="tab-organiza">
+            <div class="tv-visual">
+              <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-ten.vercel.app</span></div><img src="assets/media/app-organiza-640.webp" srcset="assets/media/app-organiza-640.webp 640w, assets/media/app-organiza-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Pantalla de ingreso de TAKU Organiza: Taku asoma detrás del formulario «Tu día, en orden.» sobre un fondo azul oscuro."></div>
+              <img class="tv-outfit" src="assets/media/taku-organiza-240.webp" srcset="assets/media/taku-organiza-240.webp 240w, assets/media/taku-organiza-480.webp 480w" sizes="120px" width="480" height="610" loading="lazy" decoding="async" alt="Taku con buzo negro, una libreta con tareas tildadas y un celular con calendario.">
+            </div>
+            <div class="tv-info">
+              <div class="tv-app-head"><h3 class="tv-app-name">TAKU Organiza</h3><span class="status">Publicada</span></div>
+              <p class="tv-tagline">Tu día, en orden.</p>
+              <p>Calendario, gastos, facturas y tareas en una sola PWA, con pestañas que arma cada persona: nombre, color y campos propios. Rechaza contraseñas que ya aparecieron en filtraciones sin que la contraseña salga del navegador.</p>
+              <ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind CSS</li><li>Supabase</li></ul>
+              <div class="actions">
+                <a class="link" href="https://taku-ten.vercel.app/" target="_blank" rel="noopener">Abrir la app <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> TAKU Organiza (se abre en otra pestaña)</span></a>
+                <a class="link" href="https://github.com/Alejo571998/Taku_Organiza" target="_blank" rel="noopener">Código <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> de TAKU Organiza en GitHub (se abre en otra pestaña)</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="tv-app" role="tabpanel" id="app-dnd" aria-labelledby="tab-dnd" hidden>
+            <div class="tv-visual">
+              <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-dnd.vercel.app</span></div><img src="assets/media/app-dnd-640.webp" srcset="assets/media/app-dnd-640.webp 640w, assets/media/app-dnd-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio de TAKU D&amp;D: «¡Bienvenido, aventurero!», el botón para crear un personaje y Taku avisando que todavía no hay personajes."></div>
+              <img class="tv-outfit" src="assets/media/taku-dnd-240.webp" srcset="assets/media/taku-dnd-240.webp 240w, assets/media/taku-dnd-480.webp 480w" sizes="120px" width="480" height="599" loading="lazy" decoding="async" alt="Taku vestido de aventurero, con capa verde, cinturones de cuero y una espada, saludando.">
+            </div>
+            <div class="tv-info">
+              <div class="tv-app-head"><h3 class="tv-app-name">TAKU D&amp;D</h3><span class="status">Publicada · en desarrollo</span></div>
+              <p class="tv-tagline">Tu compañero de aventura.</p>
+              <p>Crear, gestionar y jugar personajes de Dungeons &amp; Dragons con reglas 2014 y 2024. La ficha se calcula a partir del estado del personaje, así los números nunca dejan de coincidir. Funciona sin conexión y sin cuenta.</p>
+              <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Dexie</li><li>Supabase</li><li>Playwright</li></ul>
+              <div class="actions">
+                <a class="btn btn-quiet btn-sm" href="casos/taku-dnd.html">Leer el caso <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="link" href="https://taku-dnd.vercel.app/" target="_blank" rel="noopener">Abrir la app <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> TAKU D&amp;D (se abre en otra pestaña)</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="tv-app" role="tabpanel" id="app-gastro" aria-labelledby="tab-gastro" hidden>
+            <div class="tv-visual">
+              <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-gastro.vercel.app</span></div><img src="assets/media/app-gastro-640.webp" srcset="assets/media/app-gastro-640.webp 640w, assets/media/app-gastro-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Ingreso de TAKU Gastro: «Sabé exactamente qué podés vender con lo que tenés», con Taku sobre el formulario."></div>
+              <img class="tv-outfit" src="assets/media/taku-gastro-240.webp" srcset="assets/media/taku-gastro-240.webp 240w, assets/media/taku-gastro-480.webp 409w" sizes="120px" width="409" height="500" loading="lazy" decoding="async" alt="Taku con chaqueta de cocinero y delantal, con una espátula y un celular.">
+            </div>
+            <div class="tv-info">
+              <div class="tv-app-head"><h3 class="tv-app-name">TAKU Gastro</h3><span class="status" data-status="dev">MVP publicado</span></div>
+              <p class="tv-tagline">¿Qué podés vender con lo que tenés?</p>
+              <p>Conecta el stock de ingredientes con las recetas y el menú para calcular cuántas unidades de cada plato se pueden preparar ahora y qué ingrediente se va a acabar primero.</p>
+              <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li></ul>
+              <div class="actions">
+                <a class="link" href="https://taku-gastro.vercel.app/" target="_blank" rel="noopener">Abrir la app <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> TAKU Gastro (se abre en otra pestaña)</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="tv-app" role="tabpanel" id="app-tramite" aria-labelledby="tab-tramite" hidden>
+            <div class="tv-visual">
+              <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>tramite-claro-omega.vercel.app</span></div><img src="assets/media/app-tramite-640.webp" srcset="assets/media/app-tramite-640.webp 640w, assets/media/app-tramite-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Ingreso de Trámite Claro: «Los trámites, en palabras simples», con la lista de lo que hace la app y Taku saludando."></div>
+              <img class="tv-outfit" src="assets/media/taku-tramite-240.webp" srcset="assets/media/taku-tramite-240.webp 240w, assets/media/taku-tramite-480.webp 480w" sizes="120px" width="480" height="510" loading="lazy" decoding="async" alt="Taku de saco y credencial, con una pila de papeles titulada «Trámites» y un celular escaneando un documento.">
+            </div>
+            <div class="tv-info">
+              <div class="tv-app-head"><h3 class="tv-app-name">Trámite Claro</h3><span class="status">Publicada</span></div>
+              <p class="tv-tagline">Los trámites, en palabras simples.</p>
+              <p>Le sacás una foto a ese papel que no entendés (o subís el PDF) y Taku te explica qué es, qué tan urgente es, hasta cuándo tenés y qué pasos seguir, con la web oficial del organismo.</p>
+              <ul class="tags"><li>React</li><li>Vite</li><li>API de Gemini</li><li>PWA</li></ul>
+              <div class="actions">
+                <a class="link" href="https://tramite-claro-omega.vercel.app/" target="_blank" rel="noopener">Abrir la app <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> Trámite Claro (se abre en otra pestaña)</span></a>
+                <a class="link" href="https://github.com/Alejo571998/Tramite_Claro" target="_blank" rel="noopener">Código <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> de Trámite Claro en GitHub (se abre en otra pestaña)</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="tv-app" role="tabpanel" id="app-giftly" aria-labelledby="tab-giftly" hidden>
+            <div class="tv-visual">
+              <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-giftly.vercel.app</span></div><img src="assets/media/app-giftly-640.webp" srcset="assets/media/app-giftly-640.webp 640w, assets/media/app-giftly-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio de Giftly: «¿No sabés qué regalarle?», con accesos para buscar un regalo según la persona y Taku con un celular."></div>
+              <img class="tv-outfit" src="assets/media/taku-giftly-240.webp" srcset="assets/media/taku-giftly-240.webp 240w, assets/media/taku-giftly-480.webp 432w" sizes="120px" width="432" height="495" loading="lazy" decoding="async" alt="Taku con buzo claro y mochila, con un regalo en una mano y un celular con un regalo en pantalla en la otra.">
+            </div>
+            <div class="tv-info">
+              <div class="tv-app-head"><h3 class="tv-app-name">Giftly</h3><span class="status">Publicada</span></div>
+              <p class="tv-tagline">¿Qué le regalo?</p>
+              <p>Contás quién es esa persona y qué le gusta; Taku propone regalos con un porqué, busca precios en Mercado Libre y tu grupo vota hasta que hay ganador. Si la IA no responde, la app lo avisa en lugar de inventar.</p>
+              <ul class="tags"><li>Next.js</li><li>Supabase Realtime</li><li>APIs de IA</li><li>Vitest</li></ul>
+              <div class="actions">
+                <a class="link" href="https://taku-giftly.vercel.app/" target="_blank" rel="noopener">Abrir la app <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> Giftly (se abre en otra pestaña)</span></a>
+                <a class="link" href="https://github.com/Alejo571998/Taku_Giftly" target="_blank" rel="noopener">Código <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> de Giftly en GitHub (se abre en otra pestaña)</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CASOS DE UX ================= -->
+  <section class="section" id="casos" aria-labelledby="casos-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Casos de UX</p>
+        <h2 class="section-title" id="casos-title" data-reveal>Investigación y diseño, contados de principio a fin</h2>
+        <p class="section-lead" data-reveal style="--delay:80ms">Dos proyectos de la carrera de Diseño UX/UI: qué investigué, qué decidí y en qué estado quedó cada uno, también lo que no se llegó a validar.</p>
+      </header>
+
+      <ul class="cases">
+        <li class="case-card" data-reveal>
+          <div class="case-card-media">
+            <img src="assets/media/zonaprop-wireflow-900.webp" srcset="assets/media/zonaprop-wireflow-900.webp 900w, assets/media/zonaprop-wireflow-1600.webp 1600w" sizes="(min-width: 1240px) 590px, (min-width: 960px) 48vw, 92vw" width="1600" height="729" loading="lazy" decoding="async" alt="Wireflow del rediseño de Zonaprop: búsqueda rápida, listado con el tipo de anunciante visible, resultados filtrados y ficha de la propiedad.">
+          </div>
+          <div class="case-card-body">
+            <div class="case-card-meta"><p class="eyebrow">UX research · Rediseño web · 2026</p><span class="status" data-status="study">Caso de estudio</span></div>
+            <h3 class="case-card-title"><a class="stretched" href="casos/zonaprop.html">Zonaprop: encontrar depto sin perderse en los filtros</a></h3>
+            <p>Investigué por qué buscar una propiedad cuesta más de lo que debería y propuse una nueva arquitectura para los filtros y los avisos.</p>
+            <p class="case-card-stat"><strong>80 %</strong><span>se equivocó de camino al buscar por tipo de anunciante en el tree test.</span></p>
+          </div>
+        </li>
+        <li class="case-card" data-reveal style="--delay:80ms">
+          <div class="case-card-media">
+            <img src="assets/media/alacancha-storyboard-800.webp" srcset="assets/media/alacancha-storyboard-800.webp 800w, assets/media/alacancha-storyboard-1400.webp 1400w" sizes="(min-width: 1240px) 590px, (min-width: 960px) 48vw, 92vw" width="1400" height="933" loading="lazy" decoding="async" alt="Storyboard de A la Cancha en seis viñetas: Juan no logra comunicarse con la cancha, descubre una app con los turnos disponibles y termina jugando sin problemas.">
+          </div>
+          <div class="case-card-body">
+            <div class="case-card-meta"><p class="eyebrow">UX/UI · App mobile · 2025</p><span class="status" data-status="study">Caso de estudio</span></div>
+            <h3 class="case-card-title"><a class="stretched" href="casos/a-la-cancha.html">A la Cancha: reservar sin llamar diez veces</a></h3>
+            <p>Una app para encontrar, reservar y completar equipo en canchas de fútbol, pádel y básquet, diseñada desde las entrevistas hasta el prototipo.</p>
+            <p class="case-card-stat"><strong>5 + 5</strong><span>entrevistas para entender el problema y personas en el test de usabilidad del prototipo.</span></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= SITIOS WEB ================= -->
+  <section class="section" id="sitios" aria-labelledby="sitios-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Sitios web</p>
+        <h2 class="section-title" id="sitios-title" data-reveal>Sitios para negocios de Santa Fe</h2>
+        <p class="section-lead" data-reveal style="--delay:80ms">Sitios que diseñé y desarrollé para emprendimientos y negocios entre 2024 y 2026, y algunos personales. Los dos más recientes suman un panel para que el negocio maneje precios y stock.</p>
+      </header>
+
+      <ul class="sites-featured">
+        <li class="site site--featured" data-reveal>
+          <div class="shot"><img src="assets/media/web-akoncagua-640.webp" srcset="assets/media/web-akoncagua-640.webp 640w, assets/media/web-akoncagua-1200.webp 1200w" sizes="(min-width: 1240px) 590px, (min-width: 960px) 48vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio del sitio de Akoncagua: «Promos de hoy», milanesas, hamburguesas, pollo y carne con envío sin cargo en Santa Fe."></div>
+          <div class="site-head">
+            <h3 class="site-name"><a class="stretched" href="https://akoncagua.vercel.app/" target="_blank" rel="noopener">Akoncagua <svg class="icon" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></h3>
+            <span class="site-type">Negocio · 2026</span>
+          </div>
+          <p>Promos del día con stock en vivo, pedido online con envío o retiro, y un panel que la administradora ya usa para manejar stock, precios y pedidos desde el celular.</p>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Tailwind CSS</li></ul>
+        </li>
+        <li class="site site--featured" data-reveal style="--delay:80ms">
+          <div class="shot"><img src="assets/media/web-amordidas-640.webp" srcset="assets/media/web-amordidas-640.webp 640w, assets/media/web-amordidas-1200.webp 1200w" sizes="(min-width: 1240px) 590px, (min-width: 960px) 48vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio del sitio de A Mordidas: «Sanguches que valen cada mordida», con una hamburguesa y botones para ver el menú y pedir."></div>
+          <div class="site-head">
+            <h3 class="site-name"><a class="stretched" href="https://a-mordidas-sandwicheria.vercel.app/" target="_blank" rel="noopener">A Mordidas <svg class="icon" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></h3>
+            <span class="site-type">Emprendimiento · 2026</span>
+          </div>
+          <p>Carta interactiva con carrito: el pedido de WhatsApp se arma solo. Precios, stock y productos agotados se manejan desde un panel propio.</p>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Tailwind CSS</li></ul>
+        </li>
+      </ul>
+
+      <ul class="sites">
+        <li class="site" data-reveal>
+          <div class="shot"><img src="assets/media/web-lacava-640.webp" sizes="(min-width: 1240px) 224px, (min-width: 700px) 30vw, 92vw" srcset="assets/media/web-lacava-640.webp 640w, assets/media/web-lacava-1200.webp 1200w" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio del sitio de La Cava de la Carne: «Carnes seleccionadas para negocios que buscan excelencia», sobre una foto de cortes de carne y vino."></div>
+          <div class="site-head"><h3 class="site-name"><a class="stretched" href="https://lacavadelacarne.vercel.app/" target="_blank" rel="noopener">La Cava de la Carne <svg class="icon" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></h3></div>
+          <p>Distribución de carnes, vinos y productos gourmet para gastronomía, con catálogo y contacto por WhatsApp.</p>
+        </li>
+        <li class="site" data-reveal style="--delay:50ms">
+          <div class="shot"><img src="assets/media/web-forza-640.webp" sizes="(min-width: 1240px) 224px, (min-width: 700px) 30vw, 92vw" srcset="assets/media/web-forza-640.webp 640w, assets/media/web-forza-1200.webp 1200w" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio del sitio de FORZA Fitness Nutrition: «Comé mejor. Rendí más.», viandas fitness listas para calentar."></div>
+          <div class="site-head"><h3 class="site-name"><a class="stretched" href="https://forza-fitness-three.vercel.app/" target="_blank" rel="noopener">FORZA Fitness <svg class="icon" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></h3></div>
+          <p>Viandas fitness: menú, cómo funciona y pedidos por WhatsApp.</p>
+        </li>
+        <li class="site" data-reveal style="--delay:100ms">
+          <div class="shot"><img src="assets/media/web-boda-640.webp" sizes="(min-width: 1240px) 224px, (min-width: 700px) 30vw, 92vw" srcset="assets/media/web-boda-640.webp 640w, assets/media/web-boda-1200.webp 1200w" width="1200" height="750" loading="lazy" decoding="async" alt="Portada de la invitación web de Valentina y Matías, con flores blancas de fondo y un botón para descubrir la historia."></div>
+          <div class="site-head"><h3 class="site-name"><a class="stretched" href="https://proyecto-boda-rho.vercel.app/" target="_blank" rel="noopener">Valentina y Matías <svg class="icon" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></h3></div>
+          <p>Invitación web de casamiento: la historia, los datos del día y la confirmación de asistencia.</p>
+        </li>
+        <li class="site" data-reveal style="--delay:150ms">
+          <div class="shot"><img src="assets/media/web-elmentaa-640.webp" sizes="(min-width: 1240px) 224px, (min-width: 700px) 30vw, 92vw" srcset="assets/media/web-elmentaa-640.webp 640w, assets/media/web-elmentaa-1200.webp 1200w" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio de El Mundo de Menta: una nave sobre la Tierra vista desde el espacio y el texto «Contenido gaming»."></div>
+          <div class="site-head"><h3 class="site-name"><a class="stretched" href="https://elmentaa.vercel.app/" target="_blank" rel="noopener">El Mundo de Menta <svg class="icon" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></h3></div>
+          <p>Sitio para un canal de streaming de videojuegos: quién es, qué juega y dónde verlo.</p>
+        </li>
+        <li class="site" data-reveal style="--delay:200ms">
+          <div class="shot"><img src="assets/media/web-mentatools-640.webp" sizes="(min-width: 1240px) 224px, (min-width: 700px) 30vw, 92vw" srcset="assets/media/web-mentatools-640.webp 640w, assets/media/web-mentatools-1200.webp 1200w" width="1200" height="750" loading="lazy" decoding="async" alt="MentaTools: una lista de categorías desplegables de recursos para desarrollo web sobre un paisaje de montañas."></div>
+          <div class="site-head"><h3 class="site-name"><a class="stretched" href="https://mentatool.lovable.app/" target="_blank" rel="noopener">MentaTools <svg class="icon" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></h3></div>
+          <p>Directorio de herramientas y recursos para diseñar y programar sitios, por categorías.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE MÍ ================= -->
+  <section class="section" id="sobre-mi" aria-labelledby="sobre-mi-title">
+    <div class="container about">
+      <div class="about-intro">
+        <header class="about-head">
+          <p class="eyebrow">Sobre mí</p>
+          <h2 class="section-title" id="sobre-mi-title" data-reveal>Vengo de las ventas</h2>
+          <p class="about-lead" data-reveal style="--delay:60ms">Llevo más de siete años en ventas y atención al cliente: turismo, vinos, cafeterías y, hoy, distribución gastronómica.</p>
+        </header>
+        <div class="about-text">
+          <p data-reveal style="--delay:100ms">Es la experiencia que más uso al diseñar: escuchar antes de proponer, y entender tanto a quien usa el producto como al negocio que hay detrás. En 2024 hice el curso de Desarrollo Front-end en Coderhouse y entre 2025 y 2026 la carrera de Diseño UX/UI: UX/UI, UX/UI Avanzado, UX Research y UX Writing.</p>
+          <p data-reveal style="--delay:140ms">Desde entonces diseño y programo mis propias aplicaciones. Vivo en Santa Fe, Argentina, y busco sumarme a un equipo de producto.</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="subhead" data-reveal>Cómo trabajo</h3>
+        <ul class="principles">
+          <li class="card principle" data-reveal>
+            <span class="principle-index">01</span>
+            <h4>Primero, entender</h4>
+            <p>Antes de abrir Figma hago entrevistas, encuestas o tests. En VITRACK, las reglas de los lotes y las botellas salieron de los audios de un enólogo, no de una suposición mía.</p>
+          </li>
+          <li class="card principle" data-reveal style="--delay:60ms">
+            <span class="principle-index">02</span>
+            <h4>Diseñar pensando en el código</h4>
+            <p>Trabajo con tokens, componentes y estados desde el diseño, porque después los programo yo. Lo que se dibuja tiene que poder construirse.</p>
+          </li>
+          <li class="card principle" data-reveal style="--delay:120ms">
+            <span class="principle-index">03</span>
+            <h4>Programar con IA, sin delegar el criterio</h4>
+            <p>Desarrollo asistido por agentes de IA. Yo decido el modelo de datos, las reglas y cuándo algo está terminado, y reviso cada cambio. Por eso cada proyecto tiene tests unitarios, de base de datos y de punta a punta, y chequeos de accesibilidad con axe.</p>
+          </li>
+          <li class="card principle" data-reveal style="--delay:180ms">
+            <span class="principle-index">04</span>
+            <h4>Decir lo que falta</h4>
+            <p>Cada proyecto documenta lo que todavía no hace. Un hueco a la vista se puede resolver; una función inventada, no.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRAYECTORIA ================= -->
+  <section class="section" id="trayectoria" aria-labelledby="trayectoria-title">
+    <div class="container about">
+      <header class="section-head">
+        <p class="eyebrow">Trayectoria</p>
+        <h2 class="section-title" id="trayectoria-title" data-reveal>Formación y experiencia</h2>
+      </header>
+      <div class="timelines">
+        <div>
+          <h3 class="subhead" data-reveal>Formación</h3>
+          <ol class="timeline" data-reveal>
+            <li><span class="when">2025 – 2026</span><span class="what">Carrera de Diseño UX/UI</span><span class="where">Coderhouse · UX/UI, UX/UI Avanzado, UX Research y UX Writing</span></li>
+            <li><span class="when">2024</span><span class="what">Desarrollo Web Front-end</span><span class="where">Coderhouse</span></li>
+            <li><span class="when">2019 – 2023</span><span class="what">Técnico Superior en Turismo y Hotelería</span><span class="where">IES Tupungato, Mendoza</span></li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="subhead" data-reveal>Experiencia</h3>
+          <ol class="timeline" data-reveal>
+            <li><span class="when">2025 – hoy</span><span class="what">Ventas y facturación</span><span class="where">Akoncagua · distribución de productos cárnicos</span></li>
+            <li><span class="when">2019 – 2023</span><span class="what">Agente de reservas</span><span class="where">Finca Ogawa &amp; Friends · turismo</span></li>
+            <li><span class="when">2018 – 2025</span><span class="what">Ventas y atención al cliente</span><span class="where">Flores de Fuego Wines, Havanna, RITA Specialty Coffee</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="subhead" data-reveal>Certificados</h3>
+        <ul class="certs">
+          <li class="cert" data-reveal><a href="assets/media/cert-uxui-1400.webp" target="_blank" rel="noopener"><img src="assets/media/cert-uxui-480.webp" width="480" height="343" loading="lazy" decoding="async" alt="Certificado de Diseño UX/UI de Coderhouse a nombre de Alejo Morales"></a><span>Diseño UX/UI</span></li>
+          <li class="cert" data-reveal style="--delay:50ms"><a href="assets/media/cert-uxui-avanzado-1400.webp" target="_blank" rel="noopener"><img src="assets/media/cert-uxui-avanzado-480.webp" width="480" height="341" loading="lazy" decoding="async" alt="Certificado de Diseño UX/UI Avanzado de Coderhouse a nombre de Alejo Morales"></a><span>UX/UI Avanzado</span></li>
+          <li class="cert" data-reveal style="--delay:100ms"><a href="assets/media/cert-ux-research-1400.webp" target="_blank" rel="noopener"><img src="assets/media/cert-ux-research-480.webp" width="480" height="325" loading="lazy" decoding="async" alt="Certificado de UX Research de Coderhouse a nombre de Alejo Morales"></a><span>UX Research</span></li>
+          <li class="cert" data-reveal style="--delay:150ms"><a href="assets/media/cert-ux-writing-1400.webp" target="_blank" rel="noopener"><img src="assets/media/cert-ux-writing-480.webp" width="480" height="325" loading="lazy" decoding="async" alt="Certificado de UX Writing de Coderhouse a nombre de Alejo Morales"></a><span>UX Writing</span></li>
+          <li class="cert" data-reveal style="--delay:200ms"><a href="assets/media/cert-frontend-1400.webp" target="_blank" rel="noopener"><img src="assets/media/cert-frontend-480.webp" width="480" height="311" loading="lazy" decoding="async" alt="Certificado de Desarrollo Web Front-end de Coderhouse a nombre de Alejo Morales"></a><span>Desarrollo Front-end</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section class="section" id="contacto" aria-labelledby="contacto-title">
+    <div class="container">
+      <div class="contact-card">
+        <p class="eyebrow">Contacto</p>
+        <h2 class="contact-title" id="contacto-title" data-reveal>Busco sumarme a un equipo de producto</h2>
+        <p class="contact-lead" data-reveal style="--delay:80ms">Como diseñador UX/UI o desarrollador front-end, full-time o part-time, remoto o híbrido desde Santa Fe. La forma más rápida de llegar a mí es por WhatsApp.</p>
+        <div class="contact-actions" data-reveal style="--delay:140ms">
+          <a class="btn btn-primary" href="https://wa.link/s55d24" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>Escribime por WhatsApp<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+        </div>
+        <div class="mail" data-reveal style="--delay:180ms">
+          <a class="mail-link" href="mailto:alejonm30@gmail.com">alejonm30@gmail.com</a>
+          <button class="btn btn-ghost btn-sm copy-btn" type="button" data-copy="alejonm30@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span data-copy-label>Copiar</span>
+          </button>
+          <span class="visually-hidden" role="status" aria-live="polite" data-copy-status></span>
+        </div>
+        <ul class="app-links" aria-label="Perfiles y CV" data-reveal style="--delay:220ms">
+          <li><a class="app-link" href="https://www.linkedin.com/in/alejo-morales-7592b9388/" target="_blank" rel="noopener"><span class="app-icon"><svg class="glyph" aria-hidden="true"><use href="#i-linkedin"/></svg></span><span class="app-label">LinkedIn</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+          <li><a class="app-link" href="https://github.com/Alejo571998?tab=repositories" target="_blank" rel="noopener"><span class="app-icon"><svg class="glyph" aria-hidden="true"><use href="#i-github"/></svg></span><span class="app-label">GitHub</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+          <li><a class="app-link" href="https://drive.google.com/file/d/1oQiCeBfrRYse8_zET46mwezRMq61E4fX/view?usp=sharing" target="_blank" rel="noopener"><span class="app-icon"><svg class="icon" aria-hidden="true"><use href="#i-cv"/></svg></span><span class="app-label">CV en PDF</span><span class="visually-hidden"> (Google Drive, se abre en otra pestaña)</span></a></li>
+        </ul>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="footer-top">
-    <span class="brand-mark">AM</span>
-    <div class="footer-socials">
-      <a href="https://www.instagram.com/alejo.menta/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/alejo-morales-7592b9388/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/Alejo571998?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-    </div>
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span data-year>2026</span> Alejo Morales · Santa Fe, Argentina</p>
+    <ul class="footer-links">
+      <li><button class="link motion-toggle" type="button" aria-pressed="false" data-motion-toggle>Pausar animaciones</button></li>
+      <li><a class="link" href="https://github.com/Alejo571998/Portfolio_Alejo-Morales" target="_blank" rel="noopener">Código del sitio <svg class="icon icon-out" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+      <li><a class="link" href="#inicio">Volver arriba <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a></li>
+    </ul>
   </div>
-  <p class="footer-bottom mono">© <span id="year"></span> Alejo Morales — Diseño UX/UI &amp; Desarrollo Front-End</p>
 </footer>
 
-<a href="https://wa.link/s55d24" target="_blank" rel="noopener" class="whatsapp-fab magnetic" aria-label="Escribir por WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<script src="./js/script.js" defer></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>
