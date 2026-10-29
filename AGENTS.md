@@ -15,7 +15,11 @@ proyectos end-to-end (diseño + implementación) como argumento central.
   sin paso de build: Vercel sirve los archivos tal cual.
 - Deploy: Vercel, desde este repo.
 
-## Estructura actual (rediseño con la dirección de DESIGN.md, rama `rediseno/liquid-glass`)
+## Estructura actual (rediseño publicado en `master` el 29/10/2026)
+El portfolio anterior quedó guardado en la rama `portfolio-anterior` y la etiqueta
+`portfolio-anterior-2026-10` (commit `dec4c2f`): NO modificarlas. Lo nuevo se trabaja sobre `master`
+(o una rama que se mergea a `master`); cada push a `master` publica en Vercel.
+
 - `index.html` — hero (pedido de Alejo, 26/10: el del portfolio publicado con su retrato y el
   nombre grande, más el H1 «Del concepto al producto. Del diseño al código.»), perfil, proyectos
   recientes (VITRACK y RUTIX), Takuverso (mapa a la izquierda y la app a la derecha, los dos a la

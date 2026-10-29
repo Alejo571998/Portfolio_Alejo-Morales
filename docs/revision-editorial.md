@@ -25,7 +25,7 @@ Todo lo nuevo sale de los README, `docs/` y commits de cada repositorio local. L
 
 ---
 
-El brief editorial pide revisar la propuesta antes de publicar una reescritura extensa. Los textos nuevos ya están en `index.html`, pero solo en la rama `rediseno-liquid-glass`: no hay nada mergeado ni desplegado. Este documento sirve para aprobarlos, corregirlos o descartarlos.
+El brief editorial pide revisar la propuesta antes de publicar una reescritura extensa. Los textos nuevos están publicados desde el 29/10/2026 (`master`); la versión anterior quedó en la rama `portfolio-anterior`. Este documento sirve para aprobarlos, corregirlos o descartarlos.
 
 **Criterio.** Cada dato salió de una fuente real (abajo, en «Fuentes»). Donde no tenía información, no completé: lo dejé fuera o lo marqué en «Verificar». Voz en primera persona y con voseo, como el sitio anterior. Saqué las fórmulas de venta de servicios.
 

@@ -1,6 +1,6 @@
 # Rediseño con la dirección de DESIGN.md — octubre 2026
 
-Reemplaza al rediseño «Immersive Liquid Glass» (`docs/rediseno-liquid-glass.md`, que queda como historia). Nada está commiteado ni publicado: todo vive en la rama `rediseno/liquid-glass`, sin commitear. Antes de empezar se copió el estado anterior (HTML, CSS, JS, docs y scripts) a `tools/.cache/backup-liquid-glass/`, que no se versiona ni se despliega.
+Reemplaza al rediseño «Immersive Liquid Glass» (`docs/rediseno-liquid-glass.md`, que queda como historia). Publicado en `master` el 29/10/2026 (portfolio-alejomorales.vercel.app); la versión anterior quedó en la rama `portfolio-anterior` y la etiqueta `portfolio-anterior-2026-10`. Antes de empezar se copió el estado anterior (HTML, CSS, JS, docs y scripts) a `tools/.cache/backup-liquid-glass/`, que no se versiona ni se despliega.
 
 ## 1. Dirección visual
 
