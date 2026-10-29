@@ -1,12 +1,11 @@
 // ============================================================
 // Taku con rig procedural (Blender) en tres pasos:
-//   1. base:   simplifica el modelo de Tripo (assets/3d/taku3d.glb) a ~40 k triángulos, sin comprimir
+//   1. base:   simplifica el modelo de Tripo (tools/fuentes/taku3d.glb) a ~40 k triángulos, sin comprimir
 //   2. rig:    tools/blender/taku-rig.py arma esqueleto, pesos y los clips idle / walk / greet
 //   3. web:    texturas WebP 1024, meshopt y animaciones limpias → assets/3d/taku.glb (el que usa el sitio)
 //
 //   npm run rig                → los tres pasos
 //   npm run rig -- --poses     → además renderiza poses de prueba en tools/.cache/rig
-//   npm run rig -- --fbx       → además exporta tools/mixamo/taku-para-mixamo.fbx (sin rig, para subir a Mixamo)
 // ============================================================
 import fs from 'node:fs';
 import path from 'node:path';
@@ -23,7 +22,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const repo = path.resolve(here, '..');
 const work = path.join(here, '.cache', 'rig');
 const args = process.argv.slice(2);
-const source = path.join(repo, 'assets', '3d', 'taku3d.glb');
+const source = path.join(here, 'fuentes', 'taku3d.glb');
 const base = path.join(work, 'taku-base.glb');
 const rigged = path.join(work, 'taku-rig-blender.glb');
 const out = path.join(repo, 'assets', '3d', 'taku.glb');
@@ -32,9 +31,8 @@ await MeshoptEncoder.ready;
 await MeshoptSimplifier.ready;
 const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.encoder': MeshoptEncoder });
 fs.mkdirSync(work, { recursive: true });
-fs.mkdirSync(path.join(here, 'mixamo'), { recursive: true });
 
-// 1. Base: la misma simplificación que optimize-taku.mjs, pero sin meshopt ni WebP (Blender no los lee bien)
+// 1. Base: malla simplificada, sin meshopt ni WebP (Blender no los lee bien)
 {
   const doc = await io.read(source);
   for (const ext of doc.getRoot().listExtensionsUsed()) if (ext.extensionName === 'KHR_materials_volume') ext.dispose();
@@ -54,7 +52,6 @@ fs.mkdirSync(path.join(here, 'mixamo'), { recursive: true });
 {
   const extra = [];
   if (args.includes('--poses')) extra.push('--poses', work);
-  if (args.includes('--fbx')) extra.push('--fbx', path.join(here, 'mixamo', 'taku-para-mixamo.fbx'));
   execFileSync(findBlender(), ['-b', '-P', path.join(here, 'blender', 'taku-rig.py'), '--', '--entrada', base, '--salida', rigged, ...extra], { stdio: ['ignore', 'ignore', 'inherit'] });
   console.log('2. rig: esqueleto, pesos y clips listos');
 }

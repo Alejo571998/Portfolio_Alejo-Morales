@@ -27,7 +27,6 @@ const manifest = [
   ['vitrack-movil', vitrack('panel-claro-375.png'), [384], { crop: [0, 0, 384, 830] }],
   ['rutix-reparto', rutix('capturas-etapa3/page-2026-10-22T20-29-49-388Z.jpeg'), [720, 1266], { crop: [0, 0, 1266, 791] }],
   ['rutix-pedido', rutix('capturas-etapa2/rutix-oscuro-detalle.png'), [900, 1264], { crop: [0, 0, 1264, 790] }],
-  ['rutix-entregado', rutix('capturas-etapa3/page-2026-10-22T20-30-40-820Z.jpeg'), [900, 1264], { crop: [0, 0, 1264, 790] }],
   ['rutix-seguimiento', rutix('capturas-etapa3/page-2026-10-22T20-26-27-123Z.jpeg'), [390], { crop: [0, 0, 390, 740] }],
   // Caso Zonaprop (slides del caso, renderizados desde el PDF exportado)
   ['zonaprop-wireflow', cache('zh-036.png'), [900, 1600], { crop: [66, 147, 1668, 760] }],
@@ -36,7 +35,7 @@ const manifest = [
   ['alacancha-boceto', alc('Wireframe a mano/1.jpeg'), [320, 560], {}],
   ['alacancha-lowfi', alc('wireframe en baja/Home wireframe baja.png'), [320], {}],
   ['alacancha-midfi', alc('Wireframe en baja con patrones de diseño/1 a.png'), [320], {}],
-  ['alacancha-hifi', alc('Sin título.png'), [320, 560], { crop: [494, 146, 262, 532] }],
+  ['alacancha-hifi', alc('Sin título.png'), [320], { crop: [494, 146, 262, 532] }],
   ['alacancha-storyboard', alc('Storyboard.png'), [800, 1400], {}],
   // Caso TAKU D&D (capturas del propio repositorio)
   ['dnd-modo-juego', dnd('desktop-07-modo-juego.png'), [900, 1440], {}],
@@ -70,9 +69,9 @@ const manifest = [
   ['cert-ux-research', img('Diploma_UXResearchAM.jpg'), [480, 1400], {}],
   ['cert-ux-writing', img('Certificado Ux Writer Alejo Morales_page-0001.jpg'), [480, 1400], {}],
   // Retrato
-  ['alejo', img('Yo.png'), [408], {}],
+  ['alejo', img('retrato-hero.png'), [360, 720, 1080], { trim: true }],
   // Logo de Alejo (marca del nav): parte del logo sin fondo que genera npm run favicon
-  ['logo-am', path.join(out, 'logo-am.png'), [96, 192], { trim: true }],
+  ['logo-am', img('logo-am-transparente.png'), [96, 192], { trim: true }],
 ];
 
 // Quita el fondo negro de las ilustraciones de Taku: relleno por inundación

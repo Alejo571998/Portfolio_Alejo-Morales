@@ -37,14 +37,15 @@ proyectos end-to-end (diseño + implementación) como argumento central.
 - `js/gl/taku-world.js` (Taku 3D caminando por el mapa). Se carga tarde, solo con WebGL, sin
   reduced-motion ni ahorro de datos; en equipos con poca memoria o pocos núcleos queda el Taku 2D.
 - `js/vendor/three.min.js` — subset de three.js generado con `tools/` (no editar a mano).
-- `assets/media/` — TODO lo que usa el sitio (WebP generados, favicon PNG del logo de Alejo).
+- `assets/media/` — TODO lo que usa el sitio y nada más (WebP generados, favicons). Las fuentes
+  van en `tools/fuentes`. `assets/cv/` — el CV vigente de Alejo en PDF (el que enlazan el hero y
+  el contacto; reemplazarlo con el mismo nombre cuando cambie).
   `assets/3d/taku.glb` es el modelo que usa el sitio: rig procedural de Blender (`npm run rig`)
-  con los clips idle, walk y greet. `taku3d.glb` es la fuente de Tripo. Mixamo y Tripo se
-  probaron y quedaron descartados (ver `docs/rediseno-design-md.md`, punto 8).
+  con los clips idle, walk y greet, hecho a partir de `tools/fuentes/taku3d.glb` (la malla de
+  Tripo). Mixamo y Tripo se probaron y quedaron descartados (ver `docs/rediseno-design-md.md`, punto 8).
 - `tools/` — tooling local (no se despliega, ver `.vercelignore`): `tools/blender/` (rig de
-  Taku, Mixamo → GLB), `tools/fuentes/` (imágenes originales que usan los scripts),
-  `tools/.env` (clave de Tripo, ignorada por git). La foto del escritorio (Seedream 5, ElevenLabs)
-  quedó en `tools/fuentes/` sin uso; NO usar la imagen de Mercury. `docs/` — decisiones y revisión editorial
+  Taku), `tools/fuentes/` (imágenes y modelos originales que usan los scripts; el retrato del hero
+  sale de `yomanga.png`). NO usar la imagen de Mercury. `docs/` — decisiones y revisión editorial
   (`docs/rediseno-design-md.md` describe el rediseño vigente).
 
 ## Convenciones a respetar
@@ -80,7 +81,8 @@ proyectos end-to-end (diseño + implementación) como argumento central.
 ## Antes de dar por terminado un cambio
 - `cd tools && npm run check` (con `npm run serve` corriendo; recorre index, casos y 404 en
   360, 820, 1366 y 1920 px; `-- --links` verifica enlaces externos) y `npm run contrast`.
-- Si se cambia el hero o el retrato: `npm run posters` (og:image).
+- Si se cambia el retrato: `npm run retrato` (o `npm run retrato -- "<versión escalada con IA>"`),
+  `npm run images -- alejo` y `npm run posters` (og:image). Si cambia solo el hero: `npm run posters`.
 - Si se agrega una imagen: sumarla al manifiesto de `tools/optimize-images.mjs`.
 - No inventar datos de proyectos: si falta información, preguntar a Alejo.
 

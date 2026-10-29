@@ -384,7 +384,7 @@ html:not(.js) .nav-toggle{ display:none; }
 
 /* Retrato recortado sobre un panel que arranca más abajo: la cabeza sobresale del marco */
 .hero-aside{ display:grid; grid-template-columns:minmax(0, clamp(150px, 42vw, 240px)) auto; align-items:end; gap:var(--sp-4); min-width:0; }
-.hero-portrait{ position:relative; isolation:isolate; width:min(100%, 360px); aspect-ratio:408 / 529; }
+.hero-portrait{ position:relative; isolation:isolate; width:min(100%, 330px); aspect-ratio:1124 / 1761; }
 .hero-portrait::before{
   content:""; position:absolute; inset:16% 0 0; z-index:-1; border-radius:var(--r-lg);
   background:

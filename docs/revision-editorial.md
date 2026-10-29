@@ -126,6 +126,15 @@ Antes había tres tarjetas de una línea con link de salida, y en proyectos.html
 
 Tu CV dice «desarrollo asistido con agentes de IA», pero el portfolio no lo menciona. ¿Querés contarlo, por ejemplo en «Cómo trabajo»? Es información que muchos equipos valoran y evita malentendidos sobre cómo se hicieron las apps.
 
+## 28/10/2026 · respuestas de Alejo, ya aplicadas
+
+- **Zonaprop:** individual. **A la Cancha:** card sorting en UXtweak. **TAKU D&D:** traducción del SRD hecha con IA; el repo ya es público (sin las capturas de otra app) y está enlazado desde el Takuverso y el caso.
+- **Trámite Claro:** la tarjeta dice lo que usa el código (React, TypeScript, Vite, API de Gemini, PWA), a pedido de Alejo. El CV dice Next.js y API de Claude: queda para corregir en el CV.
+- **TAKU Gastro:** sigue en piloto. **El Mundo de Menta:** hecho por Alejo de punta a punta. **MentaTools:** hecho con Lovable.
+- **CV:** la versión actual queda alojada en el sitio (`assets/cv/`). **VITRACK:** el piloto se hace como estaba planeado.
+- **VITRACK, demo pública (29/10):** https://vitrack-demo.vercel.app/ — bodega ficticia «Finca Los Álamos» con datos de ejemplo, entra con un clic (también como enólogo o lector) y se reinicia cada noche. La tarjeta y el caso dicen «Probar la demo».
+- Siguen sin respuesta: Giftly en el CV y si está bien mostrar los nombres de las empresas de ventas (hoy se muestran).
+
 ## Textos cambiados el 27/10 (aprobados por Alejo el 27/10)
 
 Al achicar las tarjetas de Proyectos: título «Dos productos de punta a punta», bajada sin «Ninguno lo usa todavía un cliente a diario», y descripciones de una línea para VITRACK y RUTIX. Detalle en `docs/rediseno-design-md.md`, punto 10.

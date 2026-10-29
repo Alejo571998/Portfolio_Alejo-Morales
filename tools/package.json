@@ -6,18 +6,13 @@
   "scripts": {
     "serve": "node serve.mjs",
     "images": "node optimize-images.mjs",
-    "taku": "node optimize-taku.mjs",
     "vendor": "node vendor-three.mjs",
     "posters": "node render-posters.mjs",
     "check": "node check-site.mjs",
     "contrast": "node contrast.mjs",
-    "tripo": "node tripo-taku.mjs",
     "favicon": "node favicon.mjs",
     "rig": "node taku-rig.mjs",
-    "mixamo": "node mixamo-taku.mjs",
-    "hero-foto": "node hero-foto.mjs",
-    "hero-cielo": "node hero-cielo.mjs",
-    "contraste-hero": "node contraste-hero.mjs"
+    "retrato": "node retrato-hero.mjs"
   },
   "devDependencies": {
     "@gltf-transform/cli": "4.5.1",

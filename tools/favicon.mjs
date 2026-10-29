@@ -5,9 +5,9 @@
 // El fondo se quita con "color a alfa" sobre negro: alfa = canal más brillante,
 // color = color / alfa. Así se conserva el resplandor naranja sin borde negro.
 // Salida:
-//   assets/media/logo-am.png               logo recortado, transparente (1024 px de ancho)
+//   tools/fuentes/logo-am-transparente.png logo recortado, transparente (1024 px; de ahí sale el del nav)
 //   assets/media/favicon-{32,192}.png      ícono cuadrado transparente
-//   assets/media/apple-touch-icon.png      180 px sobre onyx (iOS no admite transparencia)
+//   assets/media/apple-touch-icon.png      180 px sobre carbón (iOS no admite transparencia)
 //   favicon.ico                            16, 32 y 48 px (PNG dentro del ICO)
 // ============================================================
 import fs from 'node:fs';
@@ -19,7 +19,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const repo = path.resolve(here, '..');
 const media = path.join(repo, 'assets', 'media');
 const source = process.argv[2] || path.join(here, 'fuentes', 'logoAM.png');
-const ONYX = { r: 0x17, g: 0x17, b: 0x21, alpha: 1 };
+const CARBON = { r: 0x13, g: 0x13, b: 0x13, alpha: 1 };
 const FLOOR = 0.07; // ruido del fondo negro que pasa a ser transparente
 
 const { data, info } = await sharp(source).removeAlpha().raw().toBuffer({ resolveWithObject: true });
@@ -46,7 +46,7 @@ const crop = { left: -box.info.trimOffsetLeft, top: -box.info.trimOffsetTop, wid
 const logo = box.data;
 const logoSmall = await sharp(solid).extract(crop).toBuffer();
 const { width: lw, height: lh } = box.info;
-await sharp(logo).resize({ width: 1024 }).png({ compressionLevel: 9 }).toFile(path.join(media, 'logo-am.png'));
+await sharp(logo).resize({ width: 1024 }).png({ compressionLevel: 9 }).toFile(path.join(here, 'fuentes', 'logo-am-transparente.png'));
 
 // Cuadrado: el logo es apaisado; se centra con un margen chico para que se lea a 16 px
 async function square(size, background = { r: 0, g: 0, b: 0, alpha: 0 }, margin = 0.06) {
@@ -59,7 +59,7 @@ async function square(size, background = { r: 0, g: 0, b: 0, alpha: 0 }, margin 
 }
 
 for (const size of [32, 192]) fs.writeFileSync(path.join(media, `favicon-${size}.png`), await square(size, undefined, size <= 32 ? 0.02 : 0.08));
-fs.writeFileSync(path.join(media, 'apple-touch-icon.png'), await square(180, ONYX, 0.14));
+fs.writeFileSync(path.join(media, 'apple-touch-icon.png'), await square(180, CARBON, 0.14));
 
 // ICO con PNG embebidos (formato válido desde Windows Vista y en todos los navegadores)
 const sizes = [16, 32, 48];

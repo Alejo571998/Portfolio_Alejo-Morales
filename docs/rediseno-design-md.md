@@ -136,3 +136,25 @@ Se permitió el vidrio (ficha translúcida con desenfoque) solo en el Takuverso,
 - `npm run check`: 7 páginas × 4 anchos sin problemas (axe, desborde, consola, enlaces internos).
 
 No verificado: lectores de pantalla reales, Safari/Firefox y dispositivos físicos.
+
+## 11. Datos confirmados, retrato nuevo y limpieza (28/10)
+
+**Respuestas de Alejo aplicadas**
+- Retrato del hero: `yomanga.png` (camisa de manga larga, sin fondo). Fuente en `tools/fuentes/`; `npm run retrato` la recorta y la agranda (Lanczos) hasta 1080 px de alto y `npm run images -- alejo` saca `alejo-360/720.webp`. Pidió mejorarla al máximo sin modificarlo: queda preparada `tools/fuentes/yomanga-para-escalar.png` para Topaz Image Upscale (ElevenLabs, modelo fiel, sin creatividad en la cara); `npm run retrato -- <escalada.png>` le vuelve a poner la silueta.
+- Zonaprop fue individual (ficha del caso). A la Cancha: el card sorting fue en UXtweak (ficha y texto del caso). TAKU D&D: la traducción del SRD se hizo con IA (cifra del caso).
+- Trámite Claro: presentada en la CoderCup de Coderhouse (CV). La tecnología de la tarjeta coincide con el código del repo público y de la app publicada (pedido de Alejo): React, TypeScript, Vite, la API de Gemini y PWA. Su CV dice Next.js y API de Claude: conviene corregirlo ahí.
+- TAKU Gastro sigue en piloto con datos reales de un emprendimiento (estado «En piloto»); usa la API de Claude (`@anthropic-ai/sdk` en el repo y CV).
+- El Mundo de Menta: diseño y código de Alejo. MentaTools: hecho con Lovable. Los dos lo dicen en su tarjeta.
+- CV: la versión actual (`CV_Alejo_Morales_Frontend_UXUI.pdf`, 27/09) se aloja en `assets/cv/` y la enlazan el hero y el contacto, en lugar de Google Drive.
+- VITRACK: el piloto se está haciendo como estaba planeado.
+
+**Limpieza** (todo lo borrado sigue en el commit 910083f):
+- Del sitio: los WebP de la foto del escritorio, `rutix-entregado-*` y `alacancha-hifi-560` (nadie los usaba), el retrato viejo `alejo-408.webp` y el logo PNG de 366 KB (era fuente del logo del nav: pasó a `tools/fuentes/logo-am-transparente.png`). El ícono de iOS ahora va sobre carbón.
+- `assets/3d/taku3d.glb` (16 MB, la malla original de Tripo) pasó a `tools/fuentes/`: el sitio solo usa `taku.glb` y ya no se despliega.
+- Herramientas que quedaron sin uso: el pipeline de la foto del escritorio (`hero-foto`, `hero-cielo`, `contraste-hero` y sus fuentes, 13 MB), `optimize-taku.mjs` (reemplazado por `taku-rig.mjs`; además pisaba el modelo riggeado), los caminos descartados del rig (`mixamo-taku`, `tripo-taku`, `blender/mixamo-taku.py`) y la vista previa `tools/preview/taku-rig.html`. Quedan en disco, fuera de git, los FBX de Mixamo (`tools/mixamo/`) y `tools/.env` (clave de Tripo, ya sin uso).
+
+**Repo de TAKU D&D (28/10):** antes de hacerlo público se revisó el historial: sin claves, los PDF con copyright excluidos por `.gitignore` y la atribución CC-BY del SRD en el README. Lo único ajeno era `D&D.zip` (10 capturas de la app «5e Character Keep», material de benchmark): a pedido de Alejo se sacó de los 7 commits (se conserva el commit vacío del primer deploy) y quedó solo en su disco, en `Capturas_privadas/` (ignorada). Respaldo del repo original: `C:/Nosotros/Alejo/Programacion/_respaldos/Taku_DnD-antes-de-sacar-capturas-2026-10-28.bundle`. El 29/10, con permiso de Alejo, se subió con push forzado (con resguardo del estado anterior), el repo pasó a público y el enlace «Código» quedó en el Takuverso y en el caso.
+
+**VITRACK (29/10):** el botón de la tarjeta y del caso pasa a «Probar la demo» y lleva a https://vitrack-demo.vercel.app/ (datos de ejemplo, sin contraseña, se reinicia cada noche). La app del piloto sigue aparte, con ingreso por invitación.
+
+**Retrato con Topaz (29/10):** `yomanga-para-escalar.png` se escaló x4 con Topaz Image Upscale en ElevenLabs (modelo High Fidelity V3, sin retoque de cara, 485 créditos aprobados por Alejo) → `tools/fuentes/yomanga-topaz.png`, 1216×1808. `npm run retrato -- fuentes/yomanga-topaz.png` le devuelve la silueta y `npm run images -- alejo` saca 360, 720 y 1080 px. Comparada con el original, la cara queda igual, solo más nítida.
