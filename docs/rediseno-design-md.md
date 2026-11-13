@@ -158,3 +158,5 @@ No verificado: lectores de pantalla reales, Safari/Firefox y dispositivos físic
 **VITRACK (29/10):** el botón de la tarjeta y del caso pasa a «Probar la demo» y lleva a https://vitrack-demo.vercel.app/ (datos de ejemplo, sin contraseña, se reinicia cada noche). La app del piloto sigue aparte, con ingreso por invitación.
 
 **Retrato con Topaz (29/10):** `yomanga-para-escalar.png` se escaló x4 con Topaz Image Upscale en ElevenLabs (modelo High Fidelity V3, sin retoque de cara, 485 créditos aprobados por Alejo) → `tools/fuentes/yomanga-topaz.png`, 1216×1808. `npm run retrato -- fuentes/yomanga-topaz.png` le devuelve la silueta y `npm run images -- alejo` saca 360, 720 y 1080 px. Comparada con el original, la cara queda igual, solo más nítida.
+
+**Retrato nuevo (13/11):** Alejo pasó una foto mejor (`tools/fuentes/yo-hd.webp`, 1227×1282 px, ya sin fondo, camisa arremangada y corbata negra). `npm run retrato` ahora la toma por defecto: recorta el borde transparente y no hace falta escalarla. Salen `alejo-360/720/847.webp`; el marco del hero pasó a 847/1251. Los archivos de `yomanga` quedan en `tools/fuentes` por si se quiere volver.

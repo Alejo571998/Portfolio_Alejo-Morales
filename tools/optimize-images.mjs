@@ -69,7 +69,7 @@ const manifest = [
   ['cert-ux-research', img('Diploma_UXResearchAM.jpg'), [480, 1400], {}],
   ['cert-ux-writing', img('Certificado Ux Writer Alejo Morales_page-0001.jpg'), [480, 1400], {}],
   // Retrato
-  ['alejo', img('retrato-hero.png'), [360, 720, 1080], { trim: true }],
+  ['alejo', img('retrato-hero.png'), [360, 720, 847], { trim: true }],
   // Logo de Alejo (marca del nav): parte del logo sin fondo que genera npm run favicon
   ['logo-am', img('logo-am-transparente.png'), [96, 192], { trim: true }],
 ];

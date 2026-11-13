@@ -49,7 +49,7 @@ El portfolio anterior quedó guardado en la rama `portfolio-anterior` y la etiqu
   Tripo). Mixamo y Tripo se probaron y quedaron descartados (ver `docs/rediseno-design-md.md`, punto 8).
 - `tools/` — tooling local (no se despliega, ver `.vercelignore`): `tools/blender/` (rig de
   Taku), `tools/fuentes/` (imágenes y modelos originales que usan los scripts; el retrato del hero
-  sale de `yomanga.png`). NO usar la imagen de Mercury. `docs/` — decisiones y revisión editorial
+  sale de `yo-hd.webp`, la foto que pasó Alejo el 13/11). NO usar la imagen de Mercury. `docs/` — decisiones y revisión editorial
   (`docs/rediseno-design-md.md` describe el rediseño vigente).
 
 ## Convenciones a respetar
