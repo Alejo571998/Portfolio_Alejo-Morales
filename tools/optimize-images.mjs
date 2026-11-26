@@ -42,12 +42,12 @@ const manifest = [
   ['dnd-modo-juego-movil', dnd('mobile-07-modo-juego.png'), [360, 600], { crop: [0, 0, 1082, 2202] }],
   ['dnd-subir-nivel', dnd('desktop-15-subir-de-nivel.png'), [900, 1440], {}],
   // Takuverso — ilustraciones originales de cada app
-  ['taku-hola', img('Taku-tramiteclaro.png'), [360, 720], { cutout: true }],
-  ['taku-organiza', img('Taku-organiza.png'), [240, 480], { cutout: true }],
-  ['taku-dnd', img('Taku-D&D.png'), [240, 480], { cutout: true }],
-  ['taku-gastro', img('Taku-Gastro.png'), [240, 480], { cutout: true }],
-  ['taku-tramite', img('taku-.png'), [240, 480], { cutout: true }],
-  ['taku-giftly', giftly('Taku-Giftly.png'), [240, 480], { cutout: true }],
+  ['taku-hola', img('Taku-tramiteclaro.png'), [208, 416], { cutout: true }],
+  ['taku-organiza', img('Taku-organiza.png'), [136, 256, 480], { cutout: true }],
+  ['taku-dnd', img('Taku-D&D.png'), [136, 256, 480], { cutout: true }],
+  ['taku-gastro', img('Taku-Gastro.png'), [136, 256, 480], { cutout: true }],
+  ['taku-tramite', img('taku-.png'), [136, 256, 480], { cutout: true }],
+  ['taku-giftly', giftly('Taku-Giftly.png'), [136, 256, 480], { cutout: true }],
   // Capturas actuales de los sitios publicados (Playwright, 1440×900)
   ['web-amordidas', cache('live-amordidas-d.png'), [640, 1200], {}],
   ['web-boda', cache('live-boda-d.png'), [640, 1200], {}],

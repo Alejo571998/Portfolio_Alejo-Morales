@@ -79,7 +79,8 @@ for (const [name, viewport, dpr, touch] of viewports) {
       if (!res || res.status() >= 400) issues.push(`enlace interno roto: ${href} (${res?.status() ?? 'sin respuesta'})`);
     }
 
-    await page.addScriptTag({ content: axeSource });
+    // axe se evalúa por DevTools: un <script> inyectado lo bloquea la CSP del sitio (vercel.json)
+    await page.evaluate(axeSource);
     const axe = await page.evaluate(async () => {
       const r = await window.axe.run(document, { resultTypes: ['violations'] });
       return r.violations.map((v) => `${v.id} (${v.impact}): ${v.nodes.length} → ${v.nodes.slice(0, 3).map((n) => n.target.join(' ')).join(' | ')}`);

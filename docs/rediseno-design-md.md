@@ -160,3 +160,11 @@ No verificado: lectores de pantalla reales, Safari/Firefox y dispositivos físic
 **Retrato con Topaz (29/10):** `yomanga-para-escalar.png` se escaló x4 con Topaz Image Upscale en ElevenLabs (modelo High Fidelity V3, sin retoque de cara, 485 créditos aprobados por Alejo) → `tools/fuentes/yomanga-topaz.png`, 1216×1808. `npm run retrato -- fuentes/yomanga-topaz.png` le devuelve la silueta y `npm run images -- alejo` saca 360, 720 y 1080 px. Comparada con el original, la cara queda igual, solo más nítida.
 
 **Retrato nuevo (13/11):** Alejo pasó una foto mejor (`tools/fuentes/yo-hd.webp`, 1227×1282 px, ya sin fondo, camisa arremangada y corbata negra). `npm run retrato` ahora la toma por defecto: recorta el borde transparente y no hace falta escalarla. Salen `alejo-360/720/847.webp`; el marco del hero pasó a 847/1251. Los archivos de `yomanga` quedan en `tools/fuentes` por si se quiere volver.
+
+## 12. Seguridad y SEO (25/11)
+
+- **Seguridad:** `vercel.json` agrega CSP (solo recursos propios; WebAssembly permitido para el decodificador del modelo de Taku), X-Frame-Options y frame-ancestors (nadie puede meter el sitio en un iframe), nosniff, Referrer-Policy, Permissions-Policy y COOP. Verificado en local: fuentes, campo de puntos y Taku 3D cargan sin violaciones. `npm run check` ahora carga axe por DevTools porque la CSP bloquea scripts inyectados.
+- **Fuentes:** Archivo e Inter pasan a `assets/fonts` (138 KB, subconjunto latino) con `preload`; antes Google Fonts bloqueaba la primera pintura unos 2 s en celular.
+- **Imágenes:** las ilustraciones de Taku se generan a 136/256/480 px (y 208/416 la del mapa), acordes a cómo se muestran.
+- **SEO:** datos estructurados en la portada (Person + WebSite, con el retrato) y en cada caso (CreativeWork con autor + migas), `max-image-preview:large` y sitemap con fechas al día.
+- **Pendiente de Alejo:** 2FA en GitHub y Vercel, dominio propio y Google Search Console.

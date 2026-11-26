@@ -6,6 +6,7 @@
 <title>Alejo Morales — Diseño UX/UI y desarrollo web</title>
 <meta name="description" content="Portfolio de Alejo Morales, diseñador UX/UI y desarrollador web en Santa Fe, Argentina. VITRACK y RUTIX, las apps del Takuverso, casos de UX research y sitios para negocios.">
 <meta name="author" content="Alejo Morales">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#131313">
 <link rel="canonical" href="https://portfolio-alejomorales.vercel.app/">
 
@@ -27,26 +28,59 @@
 <link rel="icon" href="assets/media/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/media/apple-touch-icon.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..600&family=Inter:wght@400..600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/estilos.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Alejo Morales",
-  "jobTitle": "Diseñador UX/UI y desarrollador web",
-  "url": "https://portfolio-alejomorales.vercel.app/",
-  "email": "mailto:alejonm30@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Santa Fe", "addressCountry": "AR" },
-  "alumniOf": { "@type": "Organization", "name": "Coderhouse" },
-  "knowsAbout": ["Diseño UX/UI", "UX Research", "UX Writing", "Desarrollo web", "React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Accesibilidad web"],
-  "sameAs": [
-    "https://www.linkedin.com/in/alejo-morales-7592b9388/",
-    "https://github.com/Alejo571998",
-    "https://www.instagram.com/alejo.menta/"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://portfolio-alejomorales.vercel.app/#alejo",
+      "name": "Alejo Morales",
+      "jobTitle": "Diseñador UX/UI y desarrollador web",
+      "url": "https://portfolio-alejomorales.vercel.app/",
+      "email": "mailto:alejonm30@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Fe",
+        "addressCountry": "AR"
+      },
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Coderhouse"
+      },
+      "knowsAbout": [
+        "Diseño UX/UI",
+        "UX Research",
+        "UX Writing",
+        "Desarrollo web",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Accesibilidad web"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/alejo-morales-7592b9388/",
+        "https://github.com/Alejo571998",
+        "https://www.instagram.com/alejo.menta/"
+      ],
+      "image": "https://portfolio-alejomorales.vercel.app/assets/media/alejo-720.webp"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://portfolio-alejomorales.vercel.app/#sitio",
+      "url": "https://portfolio-alejomorales.vercel.app/",
+      "name": "Alejo Morales",
+      "inLanguage": "es-AR",
+      "author": {
+        "@id": "https://portfolio-alejomorales.vercel.app/#alejo"
+      }
+    }
   ]
 }
 </script>
@@ -244,7 +278,7 @@
             <button class="tv-station" type="button" role="tab" id="tab-giftly" aria-controls="app-giftly" aria-selected="false" tabindex="-1"><span class="tv-pad" aria-hidden="true"></span><span class="tv-station-name">Giftly</span></button>
           </div>
           <div class="tv-taku" aria-hidden="true">
-            <img src="assets/media/taku-hola-360.webp" srcset="assets/media/taku-hola-360.webp 360w, assets/media/taku-hola-720.webp 720w" sizes="120px" width="720" height="900" alt="" loading="lazy" decoding="async">
+            <img src="assets/media/taku-hola-208.webp" srcset="assets/media/taku-hola-208.webp 208w, assets/media/taku-hola-416.webp 416w" sizes="104px" width="416" height="520" alt="" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -264,7 +298,7 @@
           <div class="tv-app" role="tabpanel" id="app-organiza" aria-labelledby="tab-organiza">
             <div class="tv-visual">
               <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-ten.vercel.app</span></div><img src="assets/media/app-organiza-640.webp" srcset="assets/media/app-organiza-640.webp 640w, assets/media/app-organiza-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Pantalla de ingreso de TAKU Organiza: Taku asoma detrás del formulario «Tu día, en orden.» sobre un fondo azul oscuro."></div>
-              <img class="tv-outfit" src="assets/media/taku-organiza-240.webp" srcset="assets/media/taku-organiza-240.webp 240w, assets/media/taku-organiza-480.webp 480w" sizes="120px" width="480" height="610" loading="lazy" decoding="async" alt="Taku con buzo negro, una libreta con tareas tildadas y un celular con calendario.">
+              <img class="tv-outfit" src="assets/media/taku-organiza-136.webp" srcset="assets/media/taku-organiza-136.webp 136w, assets/media/taku-organiza-256.webp 256w, assets/media/taku-organiza-480.webp 480w" sizes="(min-width: 1024px) 128px, 88px" width="480" height="610" loading="lazy" decoding="async" alt="Taku con buzo negro, una libreta con tareas tildadas y un celular con calendario.">
             </div>
             <div class="tv-info">
               <div class="tv-app-head"><h3 class="tv-app-name">TAKU Organiza</h3><span class="status">Publicada</span></div>
@@ -280,7 +314,7 @@
           <div class="tv-app" role="tabpanel" id="app-dnd" aria-labelledby="tab-dnd" hidden>
             <div class="tv-visual">
               <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-dnd.vercel.app</span></div><img src="assets/media/app-dnd-640.webp" srcset="assets/media/app-dnd-640.webp 640w, assets/media/app-dnd-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio de TAKU D&amp;D: «¡Bienvenido, aventurero!», el botón para crear un personaje y Taku avisando que todavía no hay personajes."></div>
-              <img class="tv-outfit" src="assets/media/taku-dnd-240.webp" srcset="assets/media/taku-dnd-240.webp 240w, assets/media/taku-dnd-480.webp 480w" sizes="120px" width="480" height="599" loading="lazy" decoding="async" alt="Taku vestido de aventurero, con capa verde, cinturones de cuero y una espada, saludando.">
+              <img class="tv-outfit" src="assets/media/taku-dnd-136.webp" srcset="assets/media/taku-dnd-136.webp 136w, assets/media/taku-dnd-256.webp 256w, assets/media/taku-dnd-480.webp 480w" sizes="(min-width: 1024px) 128px, 88px" width="480" height="599" loading="lazy" decoding="async" alt="Taku vestido de aventurero, con capa verde, cinturones de cuero y una espada, saludando.">
             </div>
             <div class="tv-info">
               <div class="tv-app-head"><h3 class="tv-app-name">TAKU D&amp;D</h3><span class="status">Publicada · en desarrollo</span></div>
@@ -297,7 +331,7 @@
           <div class="tv-app" role="tabpanel" id="app-gastro" aria-labelledby="tab-gastro" hidden>
             <div class="tv-visual">
               <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-gastro.vercel.app</span></div><img src="assets/media/app-gastro-640.webp" srcset="assets/media/app-gastro-640.webp 640w, assets/media/app-gastro-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Ingreso de TAKU Gastro: «Sabé exactamente qué podés vender con lo que tenés», con Taku sobre el formulario."></div>
-              <img class="tv-outfit" src="assets/media/taku-gastro-240.webp" srcset="assets/media/taku-gastro-240.webp 240w, assets/media/taku-gastro-480.webp 409w" sizes="120px" width="409" height="500" loading="lazy" decoding="async" alt="Taku con chaqueta de cocinero y delantal, con una espátula y un celular.">
+              <img class="tv-outfit" src="assets/media/taku-gastro-136.webp" srcset="assets/media/taku-gastro-136.webp 136w, assets/media/taku-gastro-256.webp 256w, assets/media/taku-gastro-480.webp 409w" sizes="(min-width: 1024px) 128px, 88px" width="409" height="500" loading="lazy" decoding="async" alt="Taku con chaqueta de cocinero y delantal, con una espátula y un celular.">
             </div>
             <div class="tv-info">
               <div class="tv-app-head"><h3 class="tv-app-name">TAKU Gastro</h3><span class="status">En piloto</span></div>
@@ -312,7 +346,7 @@
           <div class="tv-app" role="tabpanel" id="app-tramite" aria-labelledby="tab-tramite" hidden>
             <div class="tv-visual">
               <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>tramite-claro-omega.vercel.app</span></div><img src="assets/media/app-tramite-640.webp" srcset="assets/media/app-tramite-640.webp 640w, assets/media/app-tramite-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Ingreso de Trámite Claro: «Los trámites, en palabras simples», con la lista de lo que hace la app y Taku saludando."></div>
-              <img class="tv-outfit" src="assets/media/taku-tramite-240.webp" srcset="assets/media/taku-tramite-240.webp 240w, assets/media/taku-tramite-480.webp 480w" sizes="120px" width="480" height="510" loading="lazy" decoding="async" alt="Taku de saco y credencial, con una pila de papeles titulada «Trámites» y un celular escaneando un documento.">
+              <img class="tv-outfit" src="assets/media/taku-tramite-136.webp" srcset="assets/media/taku-tramite-136.webp 136w, assets/media/taku-tramite-256.webp 256w, assets/media/taku-tramite-480.webp 480w" sizes="(min-width: 1024px) 128px, 88px" width="480" height="510" loading="lazy" decoding="async" alt="Taku de saco y credencial, con una pila de papeles titulada «Trámites» y un celular escaneando un documento.">
             </div>
             <div class="tv-info">
               <div class="tv-app-head"><h3 class="tv-app-name">Trámite Claro</h3><span class="status">Publicada</span></div>
@@ -328,7 +362,7 @@
           <div class="tv-app" role="tabpanel" id="app-giftly" aria-labelledby="tab-giftly" hidden>
             <div class="tv-visual">
               <div class="tv-window"><div class="tv-bar" aria-hidden="true"><i></i><i></i><i></i><span>taku-giftly.vercel.app</span></div><img src="assets/media/app-giftly-640.webp" srcset="assets/media/app-giftly-640.webp 640w, assets/media/app-giftly-1200.webp 1200w" sizes="(min-width: 1240px) 560px, (min-width: 1024px) 46vw, 92vw" width="1200" height="750" loading="lazy" decoding="async" alt="Inicio de Giftly: «¿No sabés qué regalarle?», con accesos para buscar un regalo según la persona y Taku con un celular."></div>
-              <img class="tv-outfit" src="assets/media/taku-giftly-240.webp" srcset="assets/media/taku-giftly-240.webp 240w, assets/media/taku-giftly-480.webp 432w" sizes="120px" width="432" height="495" loading="lazy" decoding="async" alt="Taku con buzo claro y mochila, con un regalo en una mano y un celular con un regalo en pantalla en la otra.">
+              <img class="tv-outfit" src="assets/media/taku-giftly-136.webp" srcset="assets/media/taku-giftly-136.webp 136w, assets/media/taku-giftly-256.webp 256w, assets/media/taku-giftly-480.webp 432w" sizes="(min-width: 1024px) 128px, 88px" width="432" height="495" loading="lazy" decoding="async" alt="Taku con buzo claro y mochila, con un regalo en una mano y un celular con un regalo en pantalla en la otra.">
             </div>
             <div class="tv-info">
               <div class="tv-app-head"><h3 class="tv-app-name">Giftly</h3><span class="status">Publicada</span></div>

@@ -8,6 +8,22 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const port = Number(process.argv[2] || process.env.PORT || 5180);
 
+// Las mismas cabeceras que pone Vercel (vercel.json), así la política de seguridad se prueba en local.
+// Solo entiende fuentes del tipo "/ruta/(.*)", que son las que usa el sitio.
+const vercelHeaders = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8')).headers || [];
+  } catch { return []; }
+})();
+const headersFor = (pathname) => {
+  const out = {};
+  for (const rule of vercelHeaders) {
+    const prefix = rule.source.replace(/\(\.\*\)$/, '');
+    if (pathname.startsWith(prefix)) for (const { key, value } of rule.headers) out[key.toLowerCase()] = value;
+  }
+  return out;
+};
+
 const types = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -37,11 +53,12 @@ http
     if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, 'index.html');
     if (!fs.existsSync(file)) {
       const notFound = path.join(root, '404.html');
-      res.writeHead(404, { 'content-type': types['.html'] });
+      res.writeHead(404, { ...headersFor(url.pathname), 'content-type': types['.html'] });
       res.end(fs.existsSync(notFound) ? fs.readFileSync(notFound) : 'Not found');
       return;
     }
     res.writeHead(200, {
+      ...headersFor(url.pathname),
       'content-type': types[path.extname(file).toLowerCase()] || 'application/octet-stream',
       'cache-control': 'no-store',
     });

@@ -41,6 +41,11 @@ El portfolio anterior quedó guardado en la rama `portfolio-anterior` y la etiqu
 - `js/gl/taku-world.js` (Taku 3D caminando por el mapa). Se carga tarde, solo con WebGL, sin
   reduced-motion ni ahorro de datos; en equipos con poca memoria o pocos núcleos queda el Taku 2D.
 - `js/vendor/three.min.js` — subset de three.js generado con `tools/` (no editar a mano).
+- `vercel.json` — cabeceras de seguridad (CSP, anti-iframe, nosniff, Referrer y Permissions-Policy).
+  La CSP solo permite recursos del propio sitio: nada de scripts, fuentes ni imágenes de otros
+  dominios ni `<script>` inline (los JSON-LD sí). Si se suma algo externo, actualizarla.
+  `tools/serve.mjs` aplica las mismas cabeceras en local.
+- `assets/fonts/` — Archivo e Inter variables (OFL), subconjunto latino, alojadas en el sitio.
 - `assets/media/` — TODO lo que usa el sitio y nada más (WebP generados, favicons). Las fuentes
   van en `tools/fuentes`. `assets/cv/` — el CV vigente de Alejo en PDF (el que enlazan el hero y
   el contacto; reemplazarlo con el mismo nombre cuando cambie).
